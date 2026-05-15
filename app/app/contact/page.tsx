@@ -1,6 +1,8 @@
+import Link from "next/link";
+
 export default function Contact() {
     return <>
         <h1>Contatti</h1>
-        <a href="/about">About</a>
+        <Link href="/about">About</Link>
     </>
 }
