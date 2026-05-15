@@ -2731,4 +2731,95 @@ Opzioni pratiche:
 | Cosa | Dove |
 |------|------|
 | `docker-compose.yml` | `backup_VPS/` |
-| `.env` | `backup
+| `.env` | `backup_VPS/` (solo sul server, non su Git) |
+| `Dockerfile` | `backup_VPS/app/` |
+| Sorgenti Next.js | `app/` nel repo → per Docker vanno disponibili in `backup_VPS/app/` al build |
+
+Comando tipico sul VPS:
+
+```bash
+cd ~/app/backup_VPS    # adatta il path al tuo clone
+# assicurati che backup_VPS/app/ contenga il codice Next
+docker compose up -d --build
+```
+
+---
+
+_**User**_
+
+ricordami per cortesia: nelle variabili secrets di Github action i valori da inserire sono VPS_USER= root, VPS_HOST= 218.160.47.95 e VPS_SSH_KEY= la chiave privata o la chiave pubblica (non ricordo bene)?
+
+---
+
+_**Agent (default)**_
+
+<think><details><summary>Thought Process</summary>
+VPS_SSH_KEY should be the private key for GitHub Actions to deploy to a VPS.
+```</details></think>
+
+_**Agent (default)**_
+
+Ecco il riepilogo per i **secrets** di GitHub Actions (deploy SSH sul VPS).
+
+## Valori dei secrets
+
+| Secret | Valore | Note |
+|--------|--------|------|
+| **VPS_USER** | `root` | Utente SSH con cui ti colleghi al VPS (ok se usi `root`) |
+| **VPS_HOST** | `218.160.47.95` | IP (o dominio) del VPS |
+| **VPS_SSH_KEY** | **Chiave privata** | Non la pubblica |
+
+---
+
+## `VPS_SSH_KEY` = chiave **privata**
+
+In GitHub Actions il workflow fa SSH **dal runner GitHub verso il VPS**. Per autenticarsi serve la **private key** (quella **senza** `.pub`).
+
+Incolla tutto il contenuto, incluse le righe:
+
+```text
+-----BEGIN OPENSSH PRIVATE KEY-----
+...
+-----END OPENSSH PRIVATE KEY-----
+```
+
+(o il formato `BEGIN RSA PRIVATE KEY` se è RSA).
+
+La chiave **pubblica** (`.pub`) va sul **VPS**, in:
+
+```text
+~/.ssh/authorized_keys
+```
+
+(dell’utente `root`, quindi `/root/.ssh/authorized_keys`).
+
+---
+
+## Schema
+
+```text
+GitHub Secret VPS_SSH_KEY  →  chiave PRIVATA
+VPS ~/.ssh/authorized_keys  →  chiave PUBBLICA (stessa coppia)
+```
+
+Se metti la pubblica nel secret, SSH fallisce con `Permission denied`.
+
+---
+
+## Buone pratiche
+
+1. Crea una coppia **solo per GitHub Actions** (non riusare la chiave personale del PC):
+   ```bash
+   ssh-keygen -t ed25519 -C "github-actions-deploy" -f deploy_key
+   ```
+2. `deploy_key` → secret **VPS_SSH_KEY**  
+   `deploy_key.pub` → `authorized_keys` sul VPS  
+3. Non committare mai la privata nel repo.
+
+---
+
+## Riepilogo
+
+- **VPS_USER** = `root`  
+- **VPS_HOST** = `218.160.47.95`  
+- **VPS_SSH_KEY** = **privata** (intero file, una riga per riga come nel file originale)
