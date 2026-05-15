@@ -1,3 +1,6 @@
 export default function Contact() {
-    return <h1>Contatti</h1>
+    return <>
+        <h1>Contatti</h1>
+        <a href="/about">About</a>
+    </>
 }

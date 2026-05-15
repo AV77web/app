@@ -1,4 +1,4 @@
-export default function Categorie() {
+export default function Categories() {
     return <h1>Categorie</h1>
 }
 
