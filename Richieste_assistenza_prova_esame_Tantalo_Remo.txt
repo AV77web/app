@@ -1,0 +1,41 @@
+Prova d'esame Remo Tantalo 2026-03-20
+
+Gestione Richieste di assistenza alla persona
+
+Pagina per selezionare i servizi:- trasporto disabili;
+				 - mensa scolastica;
+				 - asilo nido;
+				 - prolungamento orario;
+
+
+Tabelle
+
+Genitore
+
+GenitoreID int auto_increment not null Primary key,
+Nome varchar(100) not null,
+Cognome varchar(100) not null,
+CF varchar not null,
+Email varchar(255) not null,
+Telefono varchar(30) not null
+
+Beneficiario
+
+BeneficitarioID int auto_increment no null Primary key,
+Nome varchar(100) not null,
+Cognome varchar(100) not null,
+CF varchar() not null,
+
+Servizio
+
+ServizioID int auto_increment not null Primary key,
+Nome varchar (100) not null
+
+Richieste
+
+RichiestaID int auto_increment not null Primary key,
+ServizioRichiesto varchar(100) not null
+NumeroPratica int not null
+Data date
+ValoerIsee 
+

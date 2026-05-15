@@ -1,0 +1,4 @@
+comune,servizio,numero_pratica,data_compilazione,nome_richiedente,cognome_richiedente,cf_richiedente,email,telefono,nome_beneficiario,cognome_beneficiario,cf_beneficiario,numero_figli,isee
+Torino,Asilo Nido,101,2024-05-12,Maria,Rossi,RSSMRA80A01H501U,m.rossi@email.it,3491122333,Anna,Rossi,RSANNA20D45H501Z,2,15000
+Milano,Trasporto scolastico,102,2024-05-15,Luca,Bianchi,BCHLCU75T12F205X,l.bianchi@email.com,3284455667,Lorenzo,Bianchi,BCHLNZ12C12F205K,1,18500
+Genova,Mensa,103,2024-05-18,Elena,Verdi,VRDLNE68R52A123K,e.verdi@email.it,3207788990,Marco,Verdi,VRDMRC15F18A123Q,3,22000

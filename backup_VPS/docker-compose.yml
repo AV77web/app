@@ -1,0 +1,25 @@
+services:
+  app:
+    build: ./app #cartella Next.js
+    container_name: next_app
+    restart: always
+    env_file:
+      - .env
+    ports:
+      - "127.0.0.1:3000:3000"
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo:6
+    container_name: mongodb
+    restart: always
+    environment:
+      MONGO_INTDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+    volumes:
+      - mongo_data:/data/db
+
+volumes:
+  mongo_data:
+
