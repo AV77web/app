@@ -1,16 +1,12 @@
-import Link from "next/link";
 import Image from "next/image";
 
 export default function Contact() {
-    return <>
-        <h1>Contatti</h1>
-        <Link href="/about">About</Link>
-        <Image
-            src="/globe.svg"
-            alt="Immagine globo"
-            width={800}
-            height={800}
-            sizes="{max-width: 7690px} 100vw, 50vw"></Image>
+    return ( <main className="max-w-4xl ma-auto p-8">
 
-    </>
+        <h1 className="text-lg font-bold mb-6">Contattici</h1>
+        <div className="text-lg text-gray-600 mb-8">
+            <p>Compila il forma sottostante per metterti in contatto con noi.</p>
+        </div>
+
+    </main>)
 }
