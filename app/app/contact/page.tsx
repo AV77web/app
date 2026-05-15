@@ -1,5 +1,5 @@
-import Image from "next/image";
-
+import Navbar from "../../components/Navbar";
+ 
 export default function Contact() {
     return ( <main className="max-w-4xl ma-auto p-8">
 
@@ -7,6 +7,7 @@ export default function Contact() {
         <div className="text-lg text-gray-600 mb-8">
             <p>Compila il forma sottostante per metterti in contatto con noi.</p>
         </div>
+        <Navbar/>
 
     </main>)
 }
