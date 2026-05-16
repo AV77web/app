@@ -27,8 +27,9 @@ const serviceLinks: ServiceLink[] = [
 
 export default function Navbar() {
     const [isServicesOpen, setIsServicesOpen] = useState<boolean>(false);
+
     const toggleServices = (e: MouseEvent<HTMLButtonElement>) => {
-        e.preventDefault()
+        e.preventDefault();
         setIsServicesOpen(!isServicesOpen);
     };
 
@@ -36,48 +37,79 @@ export default function Navbar() {
         <nav className="bg-zinc-900 border-b border-zinc-800">
             <div className="max-w-4xl mx-auto px-4">
                 <div className="flex justify-between h-16">
+
+                    {/* Logo */}
                     <Link
                         href="/"
-                        className="flex items-center font-bold text-zinc-100 hoover:text-zinc-300 transition-colors"
+                        className="flex items-center font-bold text-zinc-100 hover:text-zinc-300 transition-colors"
                     >
                         LOGO
                     </Link>
+
+                    {/* Navigation */}
                     <div className="flex space-x-8">
+
+                        {/* Link normali */}
                         {navLinks.map((link) => (
                             <Link
                                 key={link.href}
                                 href={link.href}
-                                className="flex items-center text-zinc-300 hoover:text-zinc-100 transition-colors">
+                                className="flex items-center text-zinc-300 hover:text-zinc-100 transition-colors"
+                            >
                                 {link.label}
                             </Link>
                         ))}
-                        {/*Menu a tedina*/}
+
+                        {/* Dropdown menu */}
                         <div className="relative flex items-center">
+
                             <button
                                 className="flex items-center text-zinc-300 hover:text-zinc-100 transition-colors"
                                 onClick={toggleServices}
                                 aria-expanded={isServicesOpen}
-                                aria-label="Toggle services menu">
+                                aria-label="Toggle services menu"
+                            >
                                 Services
+
                                 <svg
-                                    className={`ml-1 h-4 w-4 transition-transform ${isServicesOpen ? "rotate-180" : ""
+                                    className={`ml-1 h-4 w-4 transition-transform duration-300 ${isServicesOpen ? "rotate-180" : ""
                                         }`}
                                     fill="none"
-                                    stroke="0 0 24 24">
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                >
                                     <path
                                         strokeLinecap="round"
                                         strokeLinejoin="round"
-                                        d="M19 9l-7-7-7-7"
+                                        strokeWidth={2}
+                                        d="M19 9l-7 7-7-7"
                                     />
                                 </svg>
                             </button>
+
+                            {/* Menu dropdown */}
+                            {isServicesOpen && (
+                                <div
+                                    className="absolute top-full mt-2 w-48 bg-zinc-800 rounded-md shadow-lg py-1 border border-zinc-700"
+                                    role="menu"
+                                    aria-orientation="vertical"
+                                >
+                                    {serviceLinks.map((service) => (
+                                        <Link
+                                            key={service.href}
+                                            href={service.href}
+                                            className="block px-4 py-2 text-zinc-300 hover:bg-zinc-700 hover:text-zinc-100 transition-colors"
+                                        >
+                                            {service.label}
+                                        </Link>
+                                    ))}
+                                </div>
+                            )}
+
                         </div>
-
-
                     </div>
-
                 </div>
             </div>
         </nav>
-    )
+    );
 }
