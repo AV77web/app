@@ -38,7 +38,7 @@ export default function Navbar(){
                 <div className="flex justify-between h-16">
                     <Link
                         href="/"
-                        className="flex items-center font-bold text-zinc-100 hover:text-zinc-300 transition-colors"
+                        className="flex items-center font-bold text-zinc-100 hoover:text-zinc-300 transition-colors"
                     >
                         LOGO
                     </Link>
@@ -47,7 +47,7 @@ export default function Navbar(){
                             <Link
                                 key={link.href}
                                 href={link.href}
-                                className="flex items-center text-zinc-300 hover:text-zinc-100 transition-colors">
+                                className="flex items-center text-zinc-300 hoover:text-zinc-100 transition-colors">
                                     {link.label}
                             </Link>
                         ))}
