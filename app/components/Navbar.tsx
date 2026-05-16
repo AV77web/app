@@ -25,11 +25,11 @@ const serviceLinks: ServiceLink[] = [
     { href: "/services/consulting", label: "Consulting" },
 ];
 
-export default function Navbar(){
-    const [isServiceOpen, setIsServiceOpen] = useState<boolean>(false);
-    const toggleServices = ( e: MouseEvent<HTMLButtonElement>) => {
+export default function Navbar() {
+    const [isServicesOpen, setIsServicesOpen] = useState<boolean>(false);
+    const toggleServices = (e: MouseEvent<HTMLButtonElement>) => {
         e.preventDefault()
-        setIsServiceOpen(!isServiceOpen);
+        setIsServicesOpen(!isServicesOpen);
     };
 
     return (
@@ -48,12 +48,29 @@ export default function Navbar(){
                                 key={link.href}
                                 href={link.href}
                                 className="flex items-center text-zinc-300 hoover:text-zinc-100 transition-colors">
-                                    {link.label}
+                                {link.label}
                             </Link>
                         ))}
                         {/*Menu a tedina*/}
-                        <div className="">
-
+                        <div className="relative flex items-center">
+                            <button
+                                className="flex items-center text-zinc-300 hover:text-zinc-100 transition-colors"
+                                onClick={toggleServices}
+                                aria-expanded={isServicesOpen}
+                                aria-labe="Toggle services menu">
+                                Services
+                                <svg
+                                    className={`ml-1 h-4 w-4 transition-transform ${isServicesOpen ? "rotate-1000" : ""
+                                        }`}
+                                    fill="none"
+                                    stroke="0 0 24 24">
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        d="M19 9l-7-7-7-7"
+                                    />
+                                </svg>
+                            </button>
                         </div>
 
 

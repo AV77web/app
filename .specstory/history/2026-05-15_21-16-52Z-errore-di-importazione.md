@@ -187,3 +187,66 @@ La pagina è in **`app/app/contact/page.tsx`**. Con `../components/Navbar` TypeS
 Ho aggiornato l’import e il linter non segnala più errori.
 
 **Nota:** nel JSX non usi ancora `<Navbar />`; se lo vuoi in pagina, aggiungilo dentro `<main>`. C’è anche un typo: `ma-auto` → `mx-auto`, `forma` → `form`. Vuoi che li corregga io?
+
+---
+
+_**User**_
+
+dopo aver eseguito il git commit --amend -m "nome commit corretto" come faccio per aggiornare il repository remoto?
+
+---
+
+_**Agent (default)**_
+
+<think><details><summary>Thought Process</summary>
+The user wants to know how to update a remote repository after using `git commit --amend`.</details></think>
+
+_**Agent (default)**_
+
+Dopo un `git commit --amend` il commit locale **non è più lo stesso** di quello sul remoto (cambia l’hash), quindi un push normale viene rifiutato. Devi **riscrivere** il branch remoto.
+
+## Se il commit amendato **non era ancora** stato pushato
+
+Basta un push normale:
+
+```bash
+git push
+```
+
+(o `git push -u origin nome-branch` la prima volta)
+
+## Se il commit amendato **era già** sul remoto
+
+Serve un push forzato:
+
+```bash
+git push --force-with-lease
+```
+
+`--force-with-lease` è preferibile a `--force`: aggiorna il remoto solo se nessun altro ha pushato nel frattempo (evita di sovrascrivere lavoro altrui per sbaglio).
+
+Se sei sicuro e vuoi forzare comunque:
+
+```bash
+git push --force
+```
+
+### Attenzione
+
+- Su **`main`** / **`master`**: il force push può creare problemi al team; usalo solo se sei sicuro che nessuno si basa ancora sul commit vecchio.
+- Se altri hanno già fatto pull del commit precedente, dovranno allinearsi (es. `git fetch` + `git reset --hard origin/nome-branch` o un rebase), non basta un semplice `git pull`.
+
+### Flusso tipico
+
+```bash
+git commit --amend -m "nome commit corretto"
+git push --force-with-lease
+```
+
+Se il branch non ha ancora un upstream:
+
+```bash
+git push --force-with-lease -u origin nome-branch
+```
+
+Vuoi che controlli sul tuo repo se il commit amendato era già su `origin` e quale branch stai usando?
