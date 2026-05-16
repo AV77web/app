@@ -57,10 +57,10 @@ export default function Navbar() {
                                 className="flex items-center text-zinc-300 hover:text-zinc-100 transition-colors"
                                 onClick={toggleServices}
                                 aria-expanded={isServicesOpen}
-                                aria-labe="Toggle services menu">
+                                aria-label="Toggle services menu">
                                 Services
                                 <svg
-                                    className={`ml-1 h-4 w-4 transition-transform ${isServicesOpen ? "rotate-1000" : ""
+                                    className={`ml-1 h-4 w-4 transition-transform ${isServicesOpen ? "rotate-180" : ""
                                         }`}
                                     fill="none"
                                     stroke="0 0 24 24">
