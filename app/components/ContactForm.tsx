@@ -7,7 +7,7 @@
 
 "use client";
 
-import { useState, ChangeEvent, FormEvent } from "react";
+import { useState, ChangeEvent, FormEvent, ReactNode } from "react";
 
 interface FormData {
     name: string;
@@ -16,6 +16,28 @@ interface FormData {
 }
 
 type FormStatus = "idle" | "sending" | "success" | "error";
+
+const fieldClassName =
+    "w-full rounded-lg bg-zinc-800 px-4 py-3 text-zinc-100 placeholder:text-zinc-500 outline-none transition focus:ring-2 focus:ring-zinc-600";
+
+function FormField({
+    label,
+    htmlFor,
+    children,
+}: {
+    label: string;
+    htmlFor: string;
+    children: ReactNode;
+}) {
+    return (
+        <div className="flex flex-col gap-3">
+            <label htmlFor={htmlFor} className="text-base font-medium text-zinc-100">
+                {label}
+            </label>
+            {children}
+        </div>
+    );
+}
 
 export default function ContactForm() {
     const [formData, setFormData] = useState<FormData>({
@@ -28,29 +50,14 @@ export default function ContactForm() {
 
     const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-
         setStatus("sending");
 
         try {
-            // Simulazione API
             await new Promise((resolve) => setTimeout(resolve, 1000));
-
             console.log("Messaggio inviato:", formData);
-
             setStatus("success");
-
-            // Reset form
-            setFormData({
-                name: "",
-                email: "",
-                message: "",
-            });
-
-            // Reset stato
-            setTimeout(() => {
-                setStatus("idle");
-            }, 3000);
-
+            setFormData({ name: "", email: "", message: "" });
+            setTimeout(() => setStatus("idle"), 3000);
         } catch (error) {
             console.error(error);
             setStatus("error");
@@ -61,196 +68,66 @@ export default function ContactForm() {
         e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
     ) => {
         const { name, value } = e.target;
-
-        setFormData((prev) => ({
-            ...prev,
-            [name]: value,
-        }));
+        setFormData((prev) => ({ ...prev, [name]: value }));
     };
 
     return (
-        <section className="w-full py-16 px-4 bg-gray-100">
-            <div className="max-w-2xl mx-auto bg-white rounded-2xl shadow-lg p-8">
+        <form onSubmit={handleSubmit} className="flex flex-col gap-8">
+            <FormField label="Nome" htmlFor="name">
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
+                    className={fieldClassName}
+                />
+            </FormField>
 
-                {/* Titolo */}
-                <div className="mb-8 text-center">
-                    <h2 className="text-3xl font-bold text-gray-800">
-                        Contattaci
-                    </h2>
+            <FormField label="Email" htmlFor="email">
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                    className={fieldClassName}
+                />
+            </FormField>
 
-                    <p className="text-gray-500 mt-2">
-                        Compila il form e ti risponderemo al più presto.
-                    </p>
-                </div>
+            <FormField label="Messaggio" htmlFor="message">
+                <textarea
+                    id="message"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    rows={8}
+                    required
+                    className={`${fieldClassName} resize-y min-h-[180px]`}
+                />
+            </FormField>
 
-                {/* Form */}
-                <form
-                    onSubmit={handleSubmit}
-                    className="flex flex-col gap-6"
-                >
+            <button
+                type="submit"
+                disabled={status === "sending"}
+                className="w-full rounded-lg bg-zinc-700 px-6 py-3 text-center font-medium text-zinc-100 transition hover:bg-zinc-600 disabled:cursor-not-allowed disabled:opacity-70"
+            >
+                {status === "sending" ? "Invio in corso..." : "Invia Messaggio"}
+            </button>
 
-                    {/* Nome */}
-                    <div className="flex flex-col gap-2">
-                        <label
-                            htmlFor="name"
-                            className="text-sm font-medium text-gray-700"
-                        >
-                            Nome
-                        </label>
+            {status === "success" && (
+                <p className="text-sm text-green-400">
+                    Messaggio inviato correttamente!
+                </p>
+            )}
 
-                        <input
-                            type="text"
-                            id="name"
-                            name="name"
-                            value={formData.name}
-                            onChange={handleChange}
-                            placeholder="Mario Rossi"
-                            required
-                            className="
-                                w-full
-                                rounded-xl
-                                border
-                                border-gray-300
-                                px-4
-                                py-3
-                                text-gray-800
-                                outline-none
-                                transition
-                                focus:border-blue-500
-                                focus:ring-2
-                                focus:ring-blue-200
-                            "
-                        />
-                    </div>
-
-                    {/* Email */}
-                    <div className="flex flex-col gap-2">
-                        <label
-                            htmlFor="email"
-                            className="text-sm font-medium text-gray-700"
-                        >
-                            Email
-                        </label>
-
-                        <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            value={formData.email}
-                            onChange={handleChange}
-                            placeholder="email@example.com"
-                            required
-                            className="
-                                w-full
-                                rounded-xl
-                                border
-                                border-gray-300
-                                px-4
-                                py-3
-                                text-gray-800
-                                outline-none
-                                transition
-                                focus:border-blue-500
-                                focus:ring-2
-                                focus:ring-blue-200
-                            "
-                        />
-                    </div>
-
-                    {/* Messaggio */}
-                    <div className="flex flex-col gap-2">
-                        <label
-                            htmlFor="message"
-                            className="text-sm font-medium text-gray-700"
-                        >
-                            Messaggio
-                        </label>
-
-                        <textarea
-                            id="message"
-                            name="message"
-                            value={formData.message}
-                            onChange={handleChange}
-                            placeholder="Scrivi qui il tuo messaggio..."
-                            rows={6}
-                            required
-                            className="
-                                w-full
-                                rounded-xl
-                                border
-                                border-gray-300
-                                px-4
-                                py-3
-                                text-gray-800
-                                outline-none
-                                transition
-                                resize-none
-                                focus:border-blue-500
-                                focus:ring-2
-                                focus:ring-blue-200
-                            "
-                        />
-                    </div>
-
-                    {/* Bottone */}
-                    <button
-                        type="submit"
-                        disabled={status === "sending"}
-                        className="
-                            w-full
-                            rounded-xl
-                            bg-blue-600
-                            px-6
-                            py-3
-                            text-white
-                            font-semibold
-                            transition
-                            hover:bg-blue-700
-                            disabled:cursor-not-allowed
-                            disabled:opacity-70
-                        "
-                    >
-                        {status === "sending"
-                            ? "Invio in corso..."
-                            : "Invia messaggio"}
-                    </button>
-
-                    {/* Messaggi */}
-                    {status === "success" && (
-                        <div
-                            className="
-                                rounded-lg
-                                bg-green-100
-                                border
-                                border-green-300
-                                px-4
-                                py-3
-                                text-green-700
-                                text-sm
-                            "
-                        >
-                            Messaggio inviato correttamente!
-                        </div>
-                    )}
-
-                    {status === "error" && (
-                        <div
-                            className="
-                                rounded-lg
-                                bg-red-100
-                                border
-                                border-red-300
-                                px-4
-                                py-3
-                                text-red-700
-                                text-sm
-                            "
-                        >
-                            Errore durante l'invio del messaggio.
-                        </div>
-                    )}
-                </form>
-            </div>
-        </section>
+            {status === "error" && (
+                <p className="text-sm text-red-400">
+                    Errore durante l&apos;invio del messaggio.
+                </p>
+            )}
+        </form>
     );
 }
