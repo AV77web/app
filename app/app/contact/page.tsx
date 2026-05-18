@@ -7,6 +7,7 @@ export default function Contact() {
         <div className="text-lg text-gray-600 mb-8">
             <p>Compila il form sottostante per metterti in contatto con noi.</p>
         </div>
+        <ContactForm/>
 
     </main>)
 }
