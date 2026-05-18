@@ -1,6 +1,4 @@
-// app/blog/page.js
 import Link from "next/link";
-
 
 interface Post {
     slug: string;
@@ -16,34 +14,40 @@ const blogPosts: Post[] = [
     },
     {
         slug: "secondo-post",
-        title: "Il mio secodo post",
-        excerpt: "Qualcosa d interessante sul secondo post..."
+        title: "Il mio secondo post",
+        excerpt: "Qualcosa di interessante sul secondo post...",
     },
     {
-        slug: "terzo post",
-        title: "il mio terzo post",
-        excerpt: "Un altro post interessante da leggere..."
-    }
+        slug: "terzo-post",
+        title: "Il mio terzo post",
+        excerpt: "Un altro post interessante da leggere...",
+    },
 ];
 
 export default function BlogPage() {
     return (
-        <div className="max-w-4xl mx-auto p-8">
-            <h1 className="text-3xl 
-        font-bold mb-8">Blog</h1>;
-            <div className="space-6">
+        <div className="mx-auto max-w-4xl p-8">
+            <h1 className="mb-8 text-3xl font-bold">Blog</h1>
+
+            <div className="space-y-6">
                 {blogPosts.map((post) => (
-                    <article key={post.slug} className="p-6 bg-zinc-800 rounded-lg">
-                        < h2 className="text-xl font-bold mb-2">
+                    <article
+                        key={post.slug}
+                        className="rounded-lg bg-zinc-800 p-6"
+                    >
+                        <h2 className="mb-2 text-xl font-bold">
                             <Link
                                 href={`/blog/${post.slug}`}
-                                className="hover:text- zinc-300 transition-colors">
+                                className="transition-colors hover:text-zinc-300"
+                            >
                                 {post.title}
                             </Link>
                         </h2>
+                        <p className="text-zinc-400">{post.excerpt}</p>
                     </article>
                 ))}
-            </div >
-        </div >
-    )
+            </div>
+        </div>
+    );
 }
+
