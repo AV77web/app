@@ -3642,3 +3642,233 @@ ContactForm.tsx  → stato, submit, JSX del form
 In sintesi: il corso separa **logica React** (stati, handler) dal **markup** (nel `return`); tu hai la stessa logica, con stile scuro sul JSX e titolo sulla pagina contatti.
 
 Se nel video il titolo “Contattaci” è **dentro** `ContactForm` e vuoi copiarlo identico, si può spostare da `page.tsx` al componente senza cambiare la logica.
+
+---
+
+_**User**_
+
+Spiegami riga per riga il componente ContactForm.tsx
+
+---
+
+_**Agent (default)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: d:\PROVE\richieste_assistenza\app\components\ContactForm.tsx</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (default)**_
+
+Spiegazione **riga per riga** di `ContactForm.tsx`, raggruppata per sezioni.
+
+---
+
+### Intestazione (righe 1–6)
+
+Commenti di documentazione: nome file, descrizione, autore, versione. Non influenzano l’esecuzione.
+
+---
+
+### Riga 8 — `"use client";`
+
+Dice a Next.js che questo file gira **nel browser**, non solo sul server. Serve perché usi `useState`, `onChange`, `onSubmit`: senza questa direttiva non potresti usare hook ed eventi in un componente normale dell’App Router.
+
+---
+
+### Riga 10 — `import`
+
+```ts
+import { useState, ChangeEvent, FormEvent } from "react";
+```
+
+- **`useState`**: crea stato che, quando cambia, fa ridisegnare il componente.
+- **`ChangeEvent`**: tipo dell’evento quando l’utente modifica input/textarea.
+- **`FormEvent`**: tipo dell’evento quando invii il form.
+
+---
+
+### Righe 12–16 — `interface FormData`
+
+Definisce la forma dell’oggetto dati del form: tre stringhe (`name`, `email`, `message`). TypeScript controlla che `formData` e `setFormData` rispettino sempre questa struttura.
+
+---
+
+### Riga 18 — `type FormStatus`
+
+Unione di stringhe letterali: lo stato del form può essere solo uno di questi quattro valori. Evita typo come `"sucess"` e aiuta l’autocompletamento.
+
+---
+
+### Righe 20–21 — `inputClassName`
+
+Costante con le classi Tailwind condivise da input e textarea (larghezza piena, sfondo scuro, padding, focus ring). Evita di ripetere le stesse classi tre volte.
+
+---
+
+### Riga 23 — `export default function ContactForm()`
+
+Esporta il componente come default: altri file possono fare `import ContactForm from "..."`. È una funzione che restituisce JSX.
+
+---
+
+### Righe 24–28 — primo `useState` (`formData`)
+
+```ts
+const [formData, setFormData] = useState<FormData>({ ... });
+```
+
+- **`formData`**: valori attuali dei campi (inizialmente tutti `""`).
+- **`setFormData`**: funzione per aggiornarli.
+- **`useState<FormData>`**: TypeScript sa che l’oggetto ha `name`, `email`, `message`.
+
+Form **controllato**: il valore mostrato negli input viene da React (`value={formData.name}`), non solo dal DOM.
+
+---
+
+### Riga 30 — secondo `useState` (`status`)
+
+```ts
+const [status, setStatus] = useState<FormStatus>("idle");
+```
+
+Stato separato per l’**invio**: parte da `"idle"` (nessuna operazione in corso).
+
+---
+
+### Righe 32–60 — `handleSubmit`
+
+**Riga 32** — Funzione `async` chiamata all’invio del form; `e` è tipizzato come evento di un `<form>`.
+
+**Riga 33** — `e.preventDefault()` blocca il comportamento predefinito del browser (ricaricare la pagina con i dati in query string).
+
+**Riga 35** — Imposta subito `"sending"` (pulsante disabilitato, testo “Invio in corso...”).
+
+**Righe 37–55** — `try`:
+- **Riga 39**: simula una chiamata API aspettando 1 secondo (`Promise` + `setTimeout`). In produzione qui andrebbe `fetch("/api/contact", ...)`.
+- **Riga 41**: stampa i dati in console (debug).
+- **Riga 42**: segna successo.
+- **Righe 45–50**: svuota i campi dopo invio riuscito.
+- **Righe 53–55**: dopo 3 secondi torna a `"idle"` così il messaggio verde può sparire e il form è di nuovo “normale”.
+
+**Righe 56–59** — `catch`: se qualcosa nel `try` lancia un errore, log in console e `status` diventa `"error"`. Con la simulazione attuale il `catch` quasi non si attiva mai.
+
+---
+
+### Righe 62–71 — `handleChange`
+
+Funzione unica per tutti i campi.
+
+**Riga 63** — `e` può venire da `<input>` o `<textarea>`.
+
+**Riga 65** — Destructuring: `name` è l’attributo `name` del campo (`"name"`, `"email"`, `"message"`), `value` è il testo digitato.
+
+**Righe 67–70** — Aggiornamento immutabile:
+- `prev` è lo stato precedente.
+- `...prev` copia tutti i campi.
+- `[name]: value` sovrascrive solo il campo che è cambiato.
+
+Esempio: se modifichi l’email, cambia solo `email`, `name` e `message` restano uguali.
+
+---
+
+### Riga 73 — `return`
+
+Inizia il JSX che React renderizza.
+
+---
+
+### Riga 74 — `<form>`
+
+- **`onSubmit={handleSubmit}`**: al click su Invia (o Invio da tastiera) viene chiamata `handleSubmit`.
+- **`className="flex flex-col gap-8"`**: layout verticale con spazio tra i blocchi.
+
+---
+
+### Righe 75–93 — campo Nome
+
+**Riga 75** — Commento JSX (solo per chi legge il codice).
+
+**Riga 76** — Contenitore colonna label + input.
+
+**Righe 77–82** — `<label htmlFor="name">`: cliccando “Nome” il focus va all’input con `id="name"` (accessibilità).
+
+**Righe 84–92** — `<input>`:
+- **`type="text"`**: testo generico.
+- **`id` / `name="name"`**: `id` per la label; `name` usato in `handleChange`.
+- **`value={formData.name}`**: valore controllato da React.
+- **`onChange={handleChange}`**: ad ogni battuta aggiorna lo stato.
+- **`required`**: validazione HTML5 (non invia se vuoto).
+- **`className={inputClassName}`**: stile condiviso.
+
+---
+
+### Righe 95–113 — campo Email
+
+Stessa struttura del Nome.
+
+**Riga 105** — `type="email"`: il browser controlla un formato email plausibile.
+
+**Riga 108** — `value={formData.email}` lega il campo allo stato.
+
+---
+
+### Righe 115–133 — campo Messaggio
+
+**Righe 124–132** — `<textarea>`:
+- Stesso pattern controllato (`value`, `onChange`, `name`, `required`).
+- **`rows={8}`**: altezza iniziale circa 8 righe.
+- **`className`**: classi base + altezza minima e ridimensionamento verticale (`resize-y`).
+
+---
+
+### Righe 135–144 — pulsante Invia
+
+**Riga 137** — `type="submit"`: invia il form (non un reset).
+
+**Riga 138** — `disabled={status === "sending"}`: durante l’invio non si può cliccare di nuovo.
+
+**Righe 141–143** — Testo condizionale: se sta inviando mostra “Invio in corso...”, altrimenti “Invia Messaggio”.
+
+---
+
+### Righe 146–157 — feedback all’utente
+
+**Righe 147–151** — Se `status === "success"`, mostra paragrafo verde (rendering condizionale con `&&`).
+
+**Righe 153–157** — Se `status === "error"`, messaggio rosso.
+
+**Riga 155** — `&apos;` è l’apostrofo in HTML/JSX (`l'invio`).
+
+---
+
+### Righe 158–160 — chiusura
+
+Chiude `</form>`, la funzione `ContactForm` e il file.
+
+---
+
+## Flusso in sintesi
+
+```mermaid
+flowchart TD
+    A[Utente digita] --> B[handleChange]
+    B --> C[formData aggiornato]
+    C --> D[Input si ridisegnano]
+    E[Utente clicca Invia] --> F[handleSubmit]
+    F --> G[status: sending]
+    G --> H{API ok?}
+    H -->|sì| I[success + reset campi]
+    I --> J[dopo 3s: idle]
+    H -->|no| K[error]
+```
+
+Il componente non invia email vere: simula solo l’attesa e aggiorna UI e stato. La pagina `contact/page.tsx` aggiunge titolo e descrizione sopra questo form.
+
+Se vuoi, nel messaggio successivo posso spiegare solo `handleChange` con un esempio numerico passo passo, oppure come sostituire la simulazione con una vera API route Next.js.
