@@ -7,7 +7,7 @@
 
 "use client";
 
-import { useState, ChangeEvent, FormEvent, ReactNode } from "react";
+import { useState, ChangeEvent, FormEvent } from "react";
 
 interface FormData {
     name: string;
@@ -17,27 +17,8 @@ interface FormData {
 
 type FormStatus = "idle" | "sending" | "success" | "error";
 
-const fieldClassName =
-    "w-full rounded-lg bg-zinc-800 px-4 py-3 text-zinc-100 placeholder:text-zinc-500 outline-none transition focus:ring-2 focus:ring-zinc-600";
-
-function FormField({
-    label,
-    htmlFor,
-    children,
-}: {
-    label: string;
-    htmlFor: string;
-    children: ReactNode;
-}) {
-    return (
-        <div className="flex flex-col gap-3">
-            <label htmlFor={htmlFor} className="text-base font-medium text-zinc-100">
-                {label}
-            </label>
-            {children}
-        </div>
-    );
-}
+const inputClassName =
+    "w-full rounded-lg bg-zinc-800 px-4 py-3 text-zinc-100 outline-none transition focus:ring-2 focus:ring-zinc-600";
 
 export default function ContactForm() {
     const [formData, setFormData] = useState<FormData>({
@@ -50,14 +31,28 @@ export default function ContactForm() {
 
     const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
+
         setStatus("sending");
 
         try {
+            // Simulazione API
             await new Promise((resolve) => setTimeout(resolve, 1000));
+
             console.log("Messaggio inviato:", formData);
+
             setStatus("success");
-            setFormData({ name: "", email: "", message: "" });
-            setTimeout(() => setStatus("idle"), 3000);
+
+            // Reset form
+            setFormData({
+                name: "",
+                email: "",
+                message: "",
+            });
+
+            // Reset stato
+            setTimeout(() => {
+                setStatus("idle");
+            }, 3000);
         } catch (error) {
             console.error(error);
             setStatus("error");
@@ -68,12 +63,24 @@ export default function ContactForm() {
         e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
     ) => {
         const { name, value } = e.target;
-        setFormData((prev) => ({ ...prev, [name]: value }));
+
+        setFormData((prev) => ({
+            ...prev,
+            [name]: value,
+        }));
     };
 
     return (
         <form onSubmit={handleSubmit} className="flex flex-col gap-8">
-            <FormField label="Nome" htmlFor="name">
+            {/* Nome */}
+            <div className="flex flex-col gap-3">
+                <label
+                    htmlFor="name"
+                    className="text-base font-medium text-zinc-100"
+                >
+                    Nome
+                </label>
+
                 <input
                     type="text"
                     id="name"
@@ -81,11 +88,19 @@ export default function ContactForm() {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className={fieldClassName}
+                    className={inputClassName}
                 />
-            </FormField>
+            </div>
 
-            <FormField label="Email" htmlFor="email">
+            {/* Email */}
+            <div className="flex flex-col gap-3">
+                <label
+                    htmlFor="email"
+                    className="text-base font-medium text-zinc-100"
+                >
+                    Email
+                </label>
+
                 <input
                     type="email"
                     id="email"
@@ -93,11 +108,19 @@ export default function ContactForm() {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className={fieldClassName}
+                    className={inputClassName}
                 />
-            </FormField>
+            </div>
 
-            <FormField label="Messaggio" htmlFor="message">
+            {/* Messaggio */}
+            <div className="flex flex-col gap-3">
+                <label
+                    htmlFor="message"
+                    className="text-base font-medium text-zinc-100"
+                >
+                    Messaggio
+                </label>
+
                 <textarea
                     id="message"
                     name="message"
@@ -105,18 +128,22 @@ export default function ContactForm() {
                     onChange={handleChange}
                     rows={8}
                     required
-                    className={`${fieldClassName} resize-y min-h-[180px]`}
+                    className={`${inputClassName} min-h-[180px] resize-y`}
                 />
-            </FormField>
+            </div>
 
+            {/* Bottone */}
             <button
                 type="submit"
                 disabled={status === "sending"}
                 className="w-full rounded-lg bg-zinc-700 px-6 py-3 text-center font-medium text-zinc-100 transition hover:bg-zinc-600 disabled:cursor-not-allowed disabled:opacity-70"
             >
-                {status === "sending" ? "Invio in corso..." : "Invia Messaggio"}
+                {status === "sending"
+                    ? "Invio in corso..."
+                    : "Invia Messaggio"}
             </button>
 
+            {/* Messaggi */}
             {status === "success" && (
                 <p className="text-sm text-green-400">
                     Messaggio inviato correttamente!

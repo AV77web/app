@@ -327,4 +327,3318 @@ _**Agent (default)**_
 <think><details><summary>Thought Process</summary>
 I need to update the ContactForm.tsx file to match the dark theme layout shown in the image.
 
-The ContactForm component should be updated to match the dark theme layout with a black background, left-aligned title "Contattaci," light gray description, white labels, dark gray rounded inputs, and a resizable textarea. The page component should be simplified to avoid duplicate titles and incorporate the form's styling directly.</details></think>
+The ContactForm component should be updated to match the dark theme layout with a black background, left-aligned title "Contattaci," light gray description, white labels, dark gray rounded inputs, and a resizable textarea. The page component should be simplified to avoid duplicate titles and incorporate the form's styling directly.
+
+The button "Invia Messaggio" should be dark gray with white text and full width. The page has a duplicate heading "Contattici" and the ContactForm component also has a "Contattaci" section with light theme styling. To resolve this, the title and description should be moved to the contact page, while the ContactForm component should be simplified to only include the form fields. This ensures consistency with the dark theme layout shown in the image.</details></think>
+
+_**Agent (default)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: d:\PROVE\richieste_assistenza\app\app\globals.css</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (default)**_
+
+<think><details><summary>Thought Process</summary>
+I'll update the ContactForm to have a dark theme with no title inside, or keep it minimal.
+
+The ContactForm will feature a dark layout with a title and description aligned with the image, using a black background and white text for consistency. Labels will appear above inputs with white text, while inputs will have a zinc-800 background, rounded corners, and light text, without visible borders. The submit button will be full-width with a zinc-700 background and "Invia Messaggio" text. The textarea will be taller with resize functionality, and spacing between fields will be generous. Placeholder text may be subtle or removed entirely.</details></think>
+
+_**Agent (default)**_
+
+Allineando pagina contatti e form al layout scuro dell'immagine: titolo e descrizione nella pagina, campi con stile dark nel form.
+
+
+
+_**Agent (default)**_
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2">
+
+<details><summary>Tool use: **edit_file_v2** • Edit file: d:\PROVE\richieste_assistenza\app\components\ContactForm.tsx</summary>
+
+</details>
+
+</tool-use>
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (default)**_
+
+Correggendo un errore introdotto nel componente: semplifico la struttura.
+
+
+
+_**Agent (default)**_
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2">
+
+<details><summary>Tool use: **edit_file_v2** • Edit file: d:\PROVE\richieste_assistenza\app\components\ContactForm.tsx</summary>
+
+</details>
+
+</tool-use>
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (default)**_
+
+<think><details><summary>Thought Process</summary>
+I accidentally overwritten the file with incomplete content again.</details></think>
+
+_**Agent (default)**_
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2">
+
+<details><summary>Tool use: **edit_file_v2** • Edit file: d:\PROVE\richieste_assistenza\app\components\ContactForm.tsx</summary>
+
+</details>
+
+</tool-use>
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (default)**_
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2">
+
+<details><summary>Tool use: **edit_file_v2** • Edit file: d:\PROVE\richieste_assistenza\app\components\ContactForm.tsx</summary>
+
+</details>
+
+</tool-use>
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (default)**_
+
+<think><details><summary>Thought Process</summary>
+I see two errors: a duplicate FormField function and another unspecified issue.</details></think>
+
+_**Agent (default)**_
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2">
+
+<details><summary>Tool use: **edit_file_v2** • Edit file: d:\PROVE\richieste_assistenza\app\components\ContactForm.tsx</summary>
+
+</details>
+
+</tool-use>
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (default)**_
+
+<think><details><summary>Thought Process</summary>
+FormField is calling motionField, which does not exist.</details></think>
+
+_**Agent (default)**_
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2">
+
+<details><summary>Tool use: **edit_file_v2** • Edit file: d:\PROVE\richieste_assistenza\app\components\ContactForm.tsx</summary>
+
+</details>
+
+</tool-use>
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (default)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: d:\PROVE\richieste_assistenza\app\components\ContactForm.tsx</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (default)**_
+
+<think><details><summary>Thought Process</summary>
+Remove the first broken FormField located on lines 23-37.</details></think>
+
+_**Agent (default)**_
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2">
+
+<details><summary>Tool use: **edit_file_v2** • Edit file: d:\PROVE\richieste_assistenza\app\components\ContactForm.tsx</summary>
+
+</details>
+
+</tool-use>
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (default)**_
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2">
+
+<details><summary>Tool use: **edit_file_v2** • Edit file: d:\PROVE\richieste_assistenza\app\app\contact\page.tsx</summary>
+
+</details>
+
+</tool-use>
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (default)**_
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2">
+
+<details><summary>Tool use: **edit_file_v2** • Edit file: d:\PROVE\richieste_assistenza\app\app\layout.tsx</summary>
+
+</details>
+
+</tool-use>
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (default)**_
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2">
+
+<details><summary>Tool use: **edit_file_v2** • Edit file: d:\PROVE\richieste_assistenza\app\components\Navbar.tsx</summary>
+
+</details>
+
+</tool-use>
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (default)**_
+
+<tool-use data-tool-type="unknown" data-tool-name="read_lints">
+<details>
+<summary>Tool use: **read_lints**</summary>
+
+
+Parameters:
+
+```json
+{
+  "paths": [
+    "d:\\PROVE\\richieste_assistenza\\app\\components\\ContactForm.tsx",
+    "d:\\PROVE\\richieste_assistenza\\app\\app\\contact\\page.tsx"
+  ]
+}
+```
+Result:
+
+```json
+{
+  "linterErrorsByFile": [
+    {
+      "relativeWorkspacePath": "d:\\PROVE\\richieste_assistenza\\app\\components\\ContactForm.tsx"
+    },
+    {
+      "relativeWorkspacePath": "d:\\PROVE\\richieste_assistenza\\app\\app\\contact\\page.tsx"
+    }
+  ]
+}
+```
+Status: **completed**
+
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="unknown" data-tool-name="read_lints"><details>
+<summary>Tool use: **read_lints**</summary>
+
+</details></tool-use>
+
+_**Agent (default)**_
+
+Ho allineato il layout a quello dell’immagine. Ecco cosa è cambiato:
+
+### Pagina contatti (`contact/page.tsx`)
+- Sfondo nero (ereditato dal layout)
+- Titolo **Contattaci** grande e bianco, allineato a sinistra
+- Sottotitolo grigio come nello screenshot
+- Rimosso il titolo duplicato dal form
+
+### Form (`ContactForm.tsx`)
+- Niente più card bianca su sfondo grigio
+- Label bianche sopra ogni campo
+- Input e textarea con sfondo `zinc-800`, angoli arrotondati, testo chiaro
+- Textarea più alta, ridimensionabile (`resize-y`)
+- Pulsante **Invia Messaggio** a tutta larghezza, grigio scuro (`zinc-700`)
+- Messaggi di successo/errore adattati al tema scuro
+
+### Layout globale
+- `body` con `bg-black` e testo chiaro
+- Navbar con sfondo nero per continuità con la pagina
+
+La logica di invio (simulazione API, stati loading/success/error) è rimasta invariata. Se vuoi, posso regolare spaziature o la larghezza massima del contenitore per avvicinarlo ancora di più allo screenshot.
+
+---
+
+_**User**_
+
+Guarda come è impostato il codie originale....
+
+---
+
+_**Agent (default)**_
+
+<think><details><summary>Thought Process</summary>
+The user wants me to examine the original code structure based on a YouTube tutorial screenshot of ContactForm.tsx.</details></think>
+
+_**Agent (default)**_
+
+Confrontando il codice attuale con la struttura del tutorial nell'immagine.
+
+
+
+_**Agent (default)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: d:\PROVE\richieste_assistenza\app\components\ContactForm.tsx</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (default)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: d:\PROVE\richieste_assistenza\app\app\contact\page.tsx</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (default)**_
+
+<think><details><summary>Thought Process</summary>
+The user wants an explanation of how the original tutorial code is structured in comparison to their current implementation.
+```
+
+They want to understand how the original tutorial code is structured, particularly noting that it uses inline JSX for fields without a FormField helper, unlike their current implementation.</details></think>
+
+_**Agent (default)**_
+
+<tool-use data-tool-type="unknown" data-tool-name="semantic_search_full">
+<details>
+<summary>Tool use: **semantic_search_full**</summary>
+
+
+Parameters:
+
+```json
+{
+  "explanation": "",
+  "includePattern": "d:\\PROVE\\richieste_assistenza",
+  "query": "ContactForm handleSubmit handleChange return form JSX",
+  "topK": 10
+}
+```
+Result:
+
+```json
+{
+  "codeResults": [
+    {
+      "codeBlock": {
+        "detailedLines": [
+          {
+            "isSignature": true,
+            "lineNumber": 42,
+            "text": "export default function ContactForm() {"
+          },
+          {
+            "lineNumber": 72
+          },
+          {
+            "lineNumber": 73
+          },
+          {
+            "lineNumber": 74,
+            "text": "    return ("
+          },
+          {
+            "lineNumber": 75,
+            "text": "        \u003cform onSubmit={handleSubmit} className=\"flex flex-col gap-8\"\u003e"
+          },
+          {
+            "lineNumber": 76,
+            "text": "            \u003cFormField label=\"Nome\" htmlFor=\"name\"\u003e"
+          },
+          {
+            "lineNumber": 77,
+            "text": "                \u003cinput"
+          },
+          {
+            "lineNumber": 78,
+            "text": "                    type=\"text\""
+          },
+          {
+            "lineNumber": 79,
+            "text": "                    id=\"name\""
+          },
+          {
+            "lineNumber": 80,
+            "text": "                    name=\"name\""
+          },
+          {
+            "lineNumber": 81,
+            "text": "                    value={formData.name}"
+          },
+          {
+            "lineNumber": 82,
+            "text": "                    onChange={handleChange}"
+          },
+          {
+            "lineNumber": 83,
+            "text": "                    required"
+          },
+          {
+            "lineNumber": 84,
+            "text": "                    className={fieldClassName}"
+          },
+          {
+            "lineNumber": 85,
+            "text": "                /\u003e"
+          },
+          {
+            "lineNumber": 86,
+            "text": "            \u003c/FormField\u003e"
+          },
+          {
+            "lineNumber": 87
+          },
+          {
+            "lineNumber": 88,
+            "text": "            \u003cFormField label=\"Email\" htmlFor=\"email\"\u003e"
+          },
+          {
+            "lineNumber": 89,
+            "text": "                \u003cinput"
+          },
+          {
+            "lineNumber": 90,
+            "text": "                    type=\"email\""
+          },
+          {
+            "lineNumber": 91,
+            "text": "                    id=\"email\""
+          },
+          {
+            "lineNumber": 92,
+            "text": "                    name=\"email\""
+          },
+          {
+            "lineNumber": 93,
+            "text": "                    value={formData.email}"
+          },
+          {
+            "lineNumber": 94,
+            "text": "                    onChange={handleChange}"
+          },
+          {
+            "lineNumber": 95,
+            "text": "                    required"
+          },
+          {
+            "lineNumber": 96,
+            "text": "                    className={fieldClassName}"
+          },
+          {
+            "lineNumber": 97,
+            "text": "                /\u003e"
+          },
+          {
+            "lineNumber": 98,
+            "text": "            \u003c/FormField\u003e"
+          },
+          {
+            "lineNumber": 99
+          },
+          {
+            "lineNumber": 100,
+            "text": "            \u003cFormField label=\"Messaggio\" htmlFor=\"message\"\u003e"
+          },
+          {
+            "lineNumber": 101,
+            "text": "                \u003ctextarea"
+          },
+          {
+            "lineNumber": 102,
+            "text": "                    id=\"message\""
+          },
+          {
+            "lineNumber": 103,
+            "text": "                    name=\"message\""
+          },
+          {
+            "lineNumber": 104,
+            "text": "                    value={formData.message}"
+          },
+          {
+            "lineNumber": 105,
+            "text": "                    onChange={handleChange}"
+          },
+          {
+            "lineNumber": 106,
+            "text": "                    rows={8}"
+          },
+          {
+            "lineNumber": 107,
+            "text": "                    required"
+          },
+          {
+            "lineNumber": 108,
+            "text": "                    className={&#96;${fieldClassName} resize-y min-h-[180px]&#96;}"
+          },
+          {
+            "lineNumber": 109,
+            "text": "                /\u003e"
+          },
+          {
+            "lineNumber": 110,
+            "text": "            \u003c/FormField\u003e"
+          },
+          {
+            "lineNumber": 111
+          },
+          {
+            "lineNumber": 112,
+            "text": "            \u003cbutton"
+          },
+          {
+            "lineNumber": 113,
+            "text": "                type=\"submit\""
+          },
+          {
+            "lineNumber": 114,
+            "text": "                disabled={status === \"sending\"}"
+          },
+          {
+            "lineNumber": 115,
+            "text": "                className=\"w-full rounded-lg bg-zinc-700 px-6 py-3 text-center font-medium text-zinc-100 transition hover:bg-zinc-600 disabled:cursor-not-allowed disabled:opacity-70\""
+          },
+          {
+            "lineNumber": 116,
+            "text": "            \u003e"
+          },
+          {
+            "lineNumber": 117,
+            "text": "                {status === \"sending\" ? \"Invio in corso...\" : \"Invia Messaggio\"}"
+          },
+          {
+            "lineNumber": 118,
+            "text": "            \u003c/button\u003e"
+          },
+          {
+            "lineNumber": 119
+          },
+          {
+            "lineNumber": 120,
+            "text": "            {status === \"success\" \u0026\u0026 ("
+          },
+          {
+            "lineNumber": 121,
+            "text": "                \u003cp className=\"text-sm text-green-400\"\u003e"
+          },
+          {
+            "lineNumber": 122,
+            "text": "                    Messaggio inviato correttamente!"
+          },
+          {
+            "lineNumber": 123,
+            "text": "                \u003c/p\u003e"
+          },
+          {
+            "lineNumber": 124,
+            "text": "            )}"
+          },
+          {
+            "lineNumber": 125
+          },
+          {
+            "lineNumber": 126,
+            "text": "            {status === \"error\" \u0026\u0026 ("
+          },
+          {
+            "lineNumber": 127,
+            "text": "                \u003cp className=\"text-sm text-red-400\"\u003e"
+          },
+          {
+            "lineNumber": 128,
+            "text": "                    Errore durante l\u0026apos;"
+          },
+          {
+            "isSignature": true,
+            "lineNumber": 133,
+            "text": "}"
+          }
+        ],
+        "range": {
+          "endPosition": {
+            "column": 1,
+            "line": 132
+          },
+          "startPosition": {
+            "line": 41
+          }
+        },
+        "relativeWorkspacePath": ".\\app\\components\\ContactForm.tsx",
+        "signatures": {
+          "ranges": [
+            {
+              "endPosition": {
+                "column": 16,
+                "line": 42
+              },
+              "startPosition": {
+                "column": 1,
+                "line": 42
+              }
+            },
+            {
+              "endPosition": {
+                "column": 5,
+                "line": 43
+              },
+              "startPosition": {
+                "column": 16,
+                "line": 42
+              }
+            }
+          ]
+        }
+      },
+      "score": 0.531932532787323
+    },
+    {
+      "codeBlock": {
+        "detailedLines": [
+          {
+            "isSignature": true,
+            "lineNumber": 42,
+            "text": "export default function ContactForm() {"
+          },
+          {
+            "lineNumber": 43,
+            "text": "    const [formData, setFormData] = useState\u003cFormData\u003e({"
+          },
+          {
+            "lineNumber": 44,
+            "text": "        name: \"\","
+          },
+          {
+            "lineNumber": 45,
+            "text": "        email: \"\","
+          },
+          {
+            "lineNumber": 46,
+            "text": "        message: \"\","
+          },
+          {
+            "lineNumber": 47,
+            "text": "    });"
+          },
+          {
+            "lineNumber": 48
+          },
+          {
+            "lineNumber": 49,
+            "text": "    const [status, setStatus] = useState\u003cFormStatus\u003e(\"idle\");"
+          },
+          {
+            "lineNumber": 50
+          },
+          {
+            "lineNumber": 51,
+            "text": "    const handleSubmit = async (e: FormEvent\u003cHTMLFormElement\u003e) =\u003e {"
+          },
+          {
+            "lineNumber": 52,
+            "text": "        e.preventDefault();"
+          },
+          {
+            "lineNumber": 53,
+            "text": "        setStatus(\"sending\");"
+          },
+          {
+            "lineNumber": 54
+          },
+          {
+            "lineNumber": 55,
+            "text": "        try {"
+          },
+          {
+            "lineNumber": 56,
+            "text": "            await new Promise((resolve) =\u003e setTimeout(resolve, 1000));"
+          },
+          {
+            "lineNumber": 57,
+            "text": "            console.log(\"Messaggio inviato:\", formData);"
+          },
+          {
+            "lineNumber": 58,
+            "text": "            setStatus(\"success\");"
+          },
+          {
+            "lineNumber": 59,
+            "text": "            setFormData({ name: \"\", email: \"\", message: \"\" });"
+          },
+          {
+            "lineNumber": 60,
+            "text": "            setTimeout(() =\u003e setStatus(\"idle\"), 3000);"
+          },
+          {
+            "lineNumber": 61,
+            "text": "        } catch (error) {"
+          },
+          {
+            "lineNumber": 62,
+            "text": "            console.error(error);"
+          },
+          {
+            "lineNumber": 63,
+            "text": "            setStatus(\"error\");"
+          },
+          {
+            "lineNumber": 64,
+            "text": "        }"
+          },
+          {
+            "lineNumber": 65,
+            "text": "    };"
+          },
+          {
+            "lineNumber": 66
+          },
+          {
+            "lineNumber": 67,
+            "text": "    const handleChange = ("
+          },
+          {
+            "lineNumber": 68,
+            "text": "        e: ChangeEvent\u003cHTMLInputElement | HTMLTextAreaElement\u003e"
+          },
+          {
+            "lineNumber": 69,
+            "text": "    ) =\u003e {"
+          },
+          {
+            "lineNumber": 70,
+            "text": "        const { name, value } = e.target;"
+          },
+          {
+            "lineNumber": 71,
+            "text": "        setFormData((prev) =\u003e ({ ...prev, [name]: value }));"
+          },
+          {
+            "lineNumber": 72,
+            "text": "    };"
+          },
+          {
+            "lineNumber": 73
+          },
+          {
+            "lineNumber": 74,
+            "text": "    return ("
+          },
+          {
+            "lineNumber": 75,
+            "text": "        \u003cform onSubmit={handleSubmit} className=\"flex flex-col gap-8\"\u003e"
+          },
+          {
+            "isSignature": true,
+            "lineNumber": 133,
+            "text": "}"
+          }
+        ],
+        "range": {
+          "endPosition": {
+            "column": 1,
+            "line": 132
+          },
+          "startPosition": {
+            "column": 1,
+            "line": 39
+          }
+        },
+        "relativeWorkspacePath": ".\\app\\components\\ContactForm.tsx",
+        "signatures": {}
+      },
+      "score": 0.5063717365264893
+    },
+    {
+      "codeBlock": {
+        "detailedLines": [
+          {
+            "isSignature": true,
+            "lineNumber": 42,
+            "text": "export default function ContactForm() {"
+          },
+          {
+            "lineNumber": 126,
+            "text": " ("
+          },
+          {
+            "lineNumber": 127,
+            "text": "                \u003cp className=\"text-sm text-red-400\"\u003e"
+          },
+          {
+            "lineNumber": 128,
+            "text": "                    Errore durante l\u0026apos;invio del messaggio."
+          },
+          {
+            "lineNumber": 129,
+            "text": "                \u003c/p\u003e"
+          },
+          {
+            "lineNumber": 130,
+            "text": "            )}"
+          },
+          {
+            "lineNumber": 131,
+            "text": "        \u003c/form\u003e"
+          },
+          {
+            "lineNumber": 132,
+            "text": "    );"
+          },
+          {
+            "isSignature": true,
+            "lineNumber": 133,
+            "text": "}"
+          }
+        ],
+        "range": {
+          "endPosition": {
+            "column": 1,
+            "line": 132
+          },
+          "startPosition": {
+            "line": 41
+          }
+        },
+        "relativeWorkspacePath": ".\\app\\components\\ContactForm.tsx",
+        "signatures": {
+          "ranges": [
+            {
+              "endPosition": {
+                "column": 16,
+                "line": 42
+              },
+              "startPosition": {
+                "column": 1,
+                "line": 42
+              }
+            },
+            {
+              "endPosition": {
+                "column": 5,
+                "line": 43
+              },
+              "startPosition": {
+                "column": 16,
+                "line": 42
+              }
+            }
+          ]
+        }
+      },
+      "score": 0.40108948945999146
+    },
+    {
+      "codeBlock": {
+        "detailedLines": [
+          {
+            "isSignature": true,
+            "lineNumber": 3,
+            "text": "export default function Contact() {"
+          },
+          {
+            "lineNumber": 4,
+            "text": "    return ("
+          },
+          {
+            "lineNumber": 5,
+            "text": "        \u003cmain className=\"mx-auto w-full max-w-4xl flex-1 px-8 py-12\"\u003e"
+          },
+          {
+            "lineNumber": 6,
+            "text": "            \u003ch1 className=\"mb-4 text-4xl font-bold text-zinc-100\"\u003eContattaci\u003c/h1\u003e"
+          },
+          {
+            "lineNumber": 7,
+            "text": "            \u003cp className=\"mb-10 text-lg text-zinc-400\"\u003e"
+          },
+          {
+            "lineNumber": 8,
+            "text": "                Compila il form sottostante per metterti in contatto con noi."
+          },
+          {
+            "lineNumber": 9,
+            "text": "            \u003c/p\u003e"
+          },
+          {
+            "lineNumber": 10,
+            "text": "            \u003cContactForm /\u003e"
+          },
+          {
+            "lineNumber": 11,
+            "text": "        \u003c/main\u003e"
+          },
+          {
+            "lineNumber": 12,
+            "text": "    );"
+          },
+          {
+            "isSignature": true,
+            "lineNumber": 13,
+            "text": "}"
+          }
+        ],
+        "range": {
+          "endPosition": {
+            "column": 1,
+            "line": 12
+          },
+          "startPosition": {
+            "column": 51
+          }
+        },
+        "relativeWorkspacePath": ".\\app\\app\\contact\\page.tsx",
+        "signatures": {}
+      },
+      "score": 0.37281540036201477
+    },
+    {
+      "codeBlock": {
+        "detailedLines": [
+          {
+            "lineNumber": 20,
+            "text": "const fieldClassName ="
+          },
+          {
+            "lineNumber": 21,
+            "text": "    \"w-full rounded-lg bg-zinc-800 px-4 py-3 text-zinc-100 placeholder:text-zinc-500 outline-none transition focus:ring-2 focus:ring-zinc-600\";"
+          },
+          {
+            "lineNumber": 22
+          },
+          {
+            "isSignature": true,
+            "lineNumber": 23,
+            "text": "function FormField({"
+          },
+          {
+            "isSignature": true,
+            "lineNumber": 24,
+            "text": "    label,"
+          },
+          {
+            "isSignature": true,
+            "lineNumber": 25,
+            "text": "    htmlFor,"
+          },
+          {
+            "isSignature": true,
+            "lineNumber": 26,
+            "text": "    children,"
+          },
+          {
+            "isSignature": true,
+            "lineNumber": 27,
+            "text": "}: {"
+          },
+          {
+            "isSignature": true,
+            "lineNumber": 28,
+            "text": "    label: string;"
+          },
+          {
+            "isSignature": true,
+            "lineNumber": 29,
+            "text": "    htmlFor: string;"
+          },
+          {
+            "isSignature": true,
+            "lineNumber": 30,
+            "text": "    children: ReactNode;"
+          },
+          {
+            "isSignature": true,
+            "lineNumber": 31,
+            "text": "}) {"
+          },
+          {
+            "lineNumber": 32,
+            "text": "    return ("
+          },
+          {
+            "lineNumber": 33,
+            "text": "        \u003cdiv className=\"flex flex-col gap-3\"\u003e"
+          },
+          {
+            "lineNumber": 34,
+            "text": "            \u003clabel htmlFor={htmlFor} className=\"text-base font-medium text-zinc-100\"\u003e"
+          },
+          {
+            "lineNumber": 35,
+            "text": "                {label}"
+          },
+          {
+            "lineNumber": 36,
+            "text": "            \u003c/label\u003e"
+          },
+          {
+            "lineNumber": 37,
+            "text": "            {children}"
+          },
+          {
+            "lineNumber": 38,
+            "text": "        \u003c/div\u003e"
+          },
+          {
+            "lineNumber": 39,
+            "text": "    );"
+          },
+          {
+            "isSignature": true,
+            "lineNumber": 40,
+            "text": "}"
+          },
+          {
+            "lineNumber": 41
+          },
+          {
+            "isSignature": true,
+            "lineNumber": 42,
+            "text": "export default function ContactForm() {"
+          },
+          {
+            "lineNumber": 43,
+            "text": "    const [formData, setFormData] = useState"
+          },
+          {
+            "lineNumber": 47,
+            "text": ";"
+          },
+          {
+            "isSignature": true,
+            "lineNumber": 133,
+            "text": "}"
+          }
+        ],
+        "range": {
+          "endPosition": {
+            "column": 1,
+            "line": 132
+          },
+          "startPosition": {
+            "column": 59,
+            "line": 17
+          }
+        },
+        "relativeWorkspacePath": ".\\app\\components\\ContactForm.tsx",
+        "signatures": {}
+      },
+      "score": 0.36754274368286133
+    },
+    {
+      "codeBlock": {
+        "detailedLines": [
+          {
+            "lineNumber": 1,
+            "text": "//===================================="
+          },
+          {
+            "lineNumber": 2,
+            "text": "// File: ContactForm.tsx"
+          },
+          {
+            "lineNumber": 3,
+            "text": "// modulo contatti"
+          },
+          {
+            "lineNumber": 4,
+            "text": "// @author: \"villari.andrea@libero.it\""
+          },
+          {
+            "lineNumber": 5,
+            "text": "// @version: \"1.0.0 2026-05-18\""
+          },
+          {
+            "lineNumber": 6,
+            "text": "//===================================="
+          },
+          {
+            "lineNumber": 7
+          },
+          {
+            "lineNumber": 8,
+            "text": "\"use client\";"
+          },
+          {
+            "lineNumber": 9
+          },
+          {
+            "lineNumber": 10,
+            "text": "import { useState, ChangeEvent, FormEvent, ReactNode } from \"react\";"
+          },
+          {
+            "lineNumber": 11
+          },
+          {
+            "isSignature": true,
+            "lineNumber": 12,
+            "text": "interface FormData {"
+          },
+          {
+            "lineNumber": 13,
+            "text": "    name: string;"
+          },
+          {
+            "lineNumber": 14,
+            "text": "    email: string;"
+          },
+          {
+            "isSignature": true,
+            "lineNumber": 15,
+            "text": "    message: string;"
+          },
+          {
+            "isSignature": true,
+            "lineNumber": 16,
+            "text": "}"
+          },
+          {
+            "lineNumber": 17
+          },
+          {
+            "isSignature": true,
+            "lineNumber": 18,
+            "text": "type FormStatus = \"idle\" | \"sending\" | \"success\" | \"error\";"
+          }
+        ],
+        "range": {
+          "endPosition": {
+            "column": 59,
+            "line": 17
+          },
+          "startPosition": {}
+        },
+        "relativeWorkspacePath": ".\\app\\components\\ContactForm.tsx",
+        "signatures": {}
+      },
+      "score": 0.3562004864215851
+    },
+    {
+      "codeBlock": {
+        "detailedLines": [
+          {
+            "isSignature": true,
+            "lineNumber": 18,
+            "text": "type FormStatus = \"idle\" | \"sending\" | \"success\" | \"error\";"
+          },
+          {
+            "lineNumber": 19
+          },
+          {
+            "lineNumber": 20,
+            "text": "const fieldClassName ="
+          },
+          {
+            "lineNumber": 21,
+            "text": "    \"w-full rounded-lg bg-zinc-800 px-4 py-3 text-zinc-100 placeholder:text-zinc-500 outline-none transition focus:ring-2 focus:ring-zinc-600\";"
+          }
+        ],
+        "range": {
+          "endPosition": {
+            "column": 141,
+            "line": 20
+          },
+          "startPosition": {
+            "column": 1,
+            "line": 15
+          }
+        },
+        "relativeWorkspacePath": ".\\app\\components\\ContactForm.tsx",
+        "signatures": {}
+      },
+      "score": 0.2752668857574463
+    },
+    {
+      "codeBlock": {
+        "detailedLines": [
+          {
+            "isSignature": true,
+            "lineNumber": 21,
+            "text": "export default function RootLayout({"
+          },
+          {
+            "isSignature": true,
+            "lineNumber": 22,
+            "text": "  children,"
+          },
+          {
+            "isSignature": true,
+            "lineNumber": 23,
+            "text": "}: Readonly\u003c{"
+          },
+          {
+            "isSignature": true,
+            "lineNumber": 24,
+            "text": "  children: React.ReactNode;"
+          },
+          {
+            "isSignature": true,
+            "lineNumber": 25,
+            "text": "}\u003e) {"
+          },
+          {
+            "lineNumber": 26,
+            "text": "  return ("
+          },
+          {
+            "lineNumber": 27,
+            "text": "    \u003chtml"
+          },
+          {
+            "lineNumber": 28,
+            "text": "      lang=\"en\""
+          },
+          {
+            "lineNumber": 29,
+            "text": "      className={&#96;${geistSans.variable} ${geistMono.variable} h-full antialiased&#96;}"
+          },
+          {
+            "lineNumber": 30,
+            "text": "    \u003e"
+          },
+          {
+            "lineNumber": 31,
+            "text": "      \u003cbody className=\"min-h-full flex flex-col bg-black text-zinc-100\"\u003e"
+          },
+          {
+            "lineNumber": 32,
+            "text": "        \u003cNavbar /\u003e"
+          },
+          {
+            "lineNumber": 33,
+            "text": "        {children}"
+          },
+          {
+            "lineNumber": 34,
+            "text": "      \u003c/body\u003e"
+          },
+          {
+            "lineNumber": 35,
+            "text": "    \u003c/html\u003e"
+          },
+          {
+            "lineNumber": 36,
+            "text": "  );"
+          },
+          {
+            "isSignature": true,
+            "lineNumber": 37,
+            "text": "}"
+          }
+        ],
+        "range": {
+          "endPosition": {
+            "column": 1,
+            "line": 36
+          },
+          "startPosition": {
+            "column": 2,
+            "line": 18
+          }
+        },
+        "relativeWorkspacePath": ".\\app\\app\\layout.tsx",
+        "signatures": {}
+      },
+      "score": 0.15634550154209137
+    },
+    {
+      "codeBlock": {
+        "detailedLines": [
+          {
+            "lineNumber": 16,
+            "text": "const navLinks: NavLink[] = ["
+          },
+          {
+            "lineNumber": 17,
+            "text": "    { href: \"/\", label: \"Home\" },"
+          },
+          {
+            "lineNumber": 18,
+            "text": "    { href: \"/about\", label: \"About\" },"
+          },
+          {
+            "lineNumber": 19,
+            "text": "    { href: \"/contact\", label: \"Contact\" },"
+          },
+          {
+            "lineNumber": 20,
+            "text": "];"
+          },
+          {
+            "lineNumber": 21
+          },
+          {
+            "lineNumber": 22,
+            "text": "const serviceLinks: ServiceLink[] = ["
+          },
+          {
+            "lineNumber": 23,
+            "text": "    { href: \"/services/web\", label: \"Web Development\" },"
+          },
+          {
+            "lineNumber": 24,
+            "text": "    { href: \"/services/mobile\", label: \"Mobile Development\" },"
+          },
+          {
+            "lineNumber": 25,
+            "text": "    { href: \"/services/consulting\", label: \"Consulting\" },"
+          },
+          {
+            "lineNumber": 26,
+            "text": "];"
+          },
+          {
+            "lineNumber": 27
+          },
+          {
+            "isSignature": true,
+            "lineNumber": 28,
+            "text": "export default function Navbar() {"
+          },
+          {
+            "lineNumber": 29,
+            "text": "    const [isServicesOpen, setIsServicesOpen] = useState\u003cboolean\u003e(false);"
+          },
+          {
+            "lineNumber": 30
+          },
+          {
+            "lineNumber": 31,
+            "text": "    const toggleServices = (e: MouseEvent\u003cHTMLButtonElement\u003e) =\u003e {"
+          },
+          {
+            "lineNumber": 32,
+            "text": "        e.preventDefault();"
+          },
+          {
+            "lineNumber": 33,
+            "text": "        setIsServicesOpen(!isServicesOpen);"
+          },
+          {
+            "lineNumber": 34,
+            "text": "    };"
+          },
+          {
+            "lineNumber": 35
+          },
+          {
+            "lineNumber": 36,
+            "text": "    return ("
+          },
+          {
+            "lineNumber": 37,
+            "text": "        \u003cnav className=\"border-b border-zinc-800 bg-black\"\u003e"
+          },
+          {
+            "lineNumber": 38,
+            "text": "            \u003cdiv className=\"max-w-4xl mx-auto px-4\"\u003e"
+          },
+          {
+            "lineNumber": 39,
+            "text": "                \u003cdiv className=\"flex justify-between h-16\"\u003e"
+          },
+          {
+            "lineNumber": 40
+          },
+          {
+            "lineNumber": 41,
+            "text": "                    {/* Logo */}"
+          },
+          {
+            "lineNumber": 42,
+            "text": "                    \u003cLink"
+          },
+          {
+            "lineNumber": 43,
+            "text": "                        href=\"/\""
+          },
+          {
+            "lineNumber": 44,
+            "text": "                        className=\"flex items-center font-bold text-zinc-100 hover:text-zinc-300 transition-colors\""
+          },
+          {
+            "lineNumber": 45,
+            "text": "                    \u003e"
+          },
+          {
+            "lineNumber": 46,
+            "text": "                        LOGO"
+          },
+          {
+            "lineNumber": 47,
+            "text": "                    \u003c/Link\u003e"
+          },
+          {
+            "lineNumber": 48
+          },
+          {
+            "lineNumber": 49,
+            "text": "                    {/* Navigation */}"
+          },
+          {
+            "lineNumber": 50,
+            "text": "                    \u003cdiv className=\"flex space-x-8\"\u003e"
+          },
+          {
+            "lineNumber": 51
+          },
+          {
+            "lineNumber": 52,
+            "text": "                        {/* Link normali */}"
+          },
+          {
+            "isSignature": true,
+            "lineNumber": 115,
+            "text": "}"
+          }
+        ],
+        "range": {
+          "endPosition": {
+            "column": 1,
+            "line": 114
+          },
+          "startPosition": {
+            "column": 1,
+            "line": 13
+          }
+        },
+        "relativeWorkspacePath": ".\\app\\components\\Navbar.tsx",
+        "signatures": {}
+      },
+      "score": 0.14459264278411865
+    },
+    {
+      "codeBlock": {
+        "detailedLines": [
+          {
+            "lineNumber": 1,
+            "text": "import Image from \"next/image\";"
+          },
+          {
+            "lineNumber": 2
+          },
+          {
+            "isSignature": true,
+            "lineNumber": 3,
+            "text": "export default function Home() {"
+          },
+          {
+            "lineNumber": 4,
+            "text": "  return ("
+          },
+          {
+            "lineNumber": 5,
+            "text": "    \u003cdiv className=\"flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black\"\u003e"
+          },
+          {
+            "lineNumber": 6,
+            "text": "      \u003cmain className=\"flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start\"\u003e"
+          },
+          {
+            "lineNumber": 7,
+            "text": "        \u003cImage"
+          },
+          {
+            "lineNumber": 8,
+            "text": "          className=\"dark:invert\""
+          },
+          {
+            "lineNumber": 9,
+            "text": "          src=\"/next.svg\""
+          },
+          {
+            "lineNumber": 10,
+            "text": "          alt=\"Next.js logo\""
+          },
+          {
+            "lineNumber": 11,
+            "text": "          width={100}"
+          },
+          {
+            "lineNumber": 12,
+            "text": "          height={20}"
+          },
+          {
+            "lineNumber": 13,
+            "text": "          priority"
+          },
+          {
+            "lineNumber": 14,
+            "text": "        /\u003e"
+          },
+          {
+            "lineNumber": 15,
+            "text": "        \u003cdiv className=\"flex flex-col items-center gap-6 text-center sm:items-start sm:text-left\"\u003e"
+          },
+          {
+            "lineNumber": 16,
+            "text": "          \u003ch1 className=\"max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50\"\u003e"
+          },
+          {
+            "lineNumber": 17,
+            "text": "            To get started, edit the page.tsx file."
+          },
+          {
+            "lineNumber": 18,
+            "text": "          \u003c/h1\u003e"
+          },
+          {
+            "lineNumber": 19,
+            "text": "          \u003cp className=\"max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400\"\u003e"
+          },
+          {
+            "lineNumber": 20,
+            "text": "            Looking for a starting point or more instructions? Head over to{\" \"}"
+          },
+          {
+            "lineNumber": 21,
+            "text": "            \u003ca"
+          },
+          {
+            "lineNumber": 22,
+            "text": "              href=\"https://vercel.com/templates?framework=next.js\u0026utm_source=create-next-app\u0026utm_medium=appdir-template-tw\u0026utm_campaign=create-next-app\""
+          },
+          {
+            "lineNumber": 23,
+            "text": "              className=\"font-medium text-zinc-950 dark:text-zinc-50\""
+          },
+          {
+            "lineNumber": 24,
+            "text": "            \u003e"
+          },
+          {
+            "lineNumber": 25,
+            "text": "              Templates"
+          },
+          {
+            "lineNumber": 26,
+            "text": "            \u003c/a\u003e{\" \"}"
+          },
+          {
+            "lineNumber": 27,
+            "text": "            or the{\" \"}"
+          },
+          {
+            "lineNumber": 28,
+            "text": "            \u003ca"
+          },
+          {
+            "lineNumber": 29,
+            "text": "              href=\"https://nextjs.org/learn?utm_source=create-next-app\u0026utm_medium=appdir-template-tw\u0026utm_campaign=create-next-app\""
+          },
+          {
+            "lineNumber": 30,
+            "text": "              className=\"font-medium text-zinc-950 dark:text-zinc-50\""
+          },
+          {
+            "lineNumber": 31,
+            "text": "            \u003e"
+          },
+          {
+            "lineNumber": 32,
+            "text": "              Learning"
+          },
+          {
+            "lineNumber": 33,
+            "text": "            \u003c/a\u003e{\" \"}"
+          },
+          {
+            "lineNumber": 34,
+            "text": "            center. "
+          },
+          {
+            "lineNumber": 35,
+            "text": "          \u003c/p\u003e"
+          },
+          {
+            "lineNumber": 36,
+            "text": "        \u003c/div\u003e"
+          },
+          {
+            "lineNumber": 37,
+            "text": "        \u003cdiv className=\"flex flex-col gap-4 text-base font-medium sm:flex-row\"\u003e"
+          },
+          {
+            "lineNumber": 38,
+            "text": "          \u003ca"
+          },
+          {
+            "lineNumber": 39,
+            "text": "            className=\"flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
+          },
+          {
+            "isSignature": true,
+            "lineNumber": 65,
+            "text": "}"
+          }
+        ],
+        "range": {
+          "endPosition": {
+            "column": 1,
+            "line": 64
+          },
+          "startPosition": {}
+        },
+        "relativeWorkspacePath": ".\\app\\app\\page.tsx",
+        "signatures": {}
+      },
+      "score": 0.13380783796310425
+    },
+    {
+      "codeBlock": {
+        "detailedLines": [
+          {
+            "isSignature": true,
+            "lineNumber": 1,
+            "text": "export default function Myapp(){"
+          },
+          {
+            "lineNumber": 2,
+            "text": "    return \u003ch1\u003eMy App\u003c/h1\u003e"
+          },
+          {
+            "isSignature": true,
+            "lineNumber": 3,
+            "text": "}"
+          }
+        ],
+        "range": {
+          "endPosition": {
+            "column": 1,
+            "line": 2
+          },
+          "startPosition": {}
+        },
+        "relativeWorkspacePath": ".\\app\\app\\myapp\\page.tsx",
+        "signatures": {}
+      },
+      "score": 0.08624566346406937
+    },
+    {
+      "codeBlock": {
+        "detailedLines": [
+          {
+            "isSignature": true,
+            "lineNumber": 1,
+            "text": "export default function About() {"
+          },
+          {
+            "lineNumber": 2,
+            "text": "    return ("
+          },
+          {
+            "lineNumber": 3,
+            "text": "        \u003cmain className=\"max-w-4xl mx-auto p-8\"\u003e"
+          },
+          {
+            "lineNumber": 4,
+            "text": "            \u003ch1 className=\"text-4xl font-bold mb-6\"\u003eChi Siamo\u003c/h1\u003e"
+          },
+          {
+            "lineNumber": 5
+          },
+          {
+            "lineNumber": 6,
+            "text": "            \u003cdiv className=\"text-lg text-gray-600 space-y-4 mb-8\"\u003e"
+          },
+          {
+            "lineNumber": 7,
+            "text": "                \u003cp\u003e"
+          },
+          {
+            "lineNumber": 8,
+            "text": "                    Siamo un team di sviluppatori appassionati di tecnologia web moderne."
+          },
+          {
+            "lineNumber": 9,
+            "text": "                \u003c/p\u003e"
+          },
+          {
+            "lineNumber": 10,
+            "text": "                \u003cp\u003e"
+          },
+          {
+            "lineNumber": 11,
+            "text": "                    La nostra missione è creare applicazione veloci, scalabili e user-friendly."
+          },
+          {
+            "lineNumber": 12,
+            "text": "                \u003c/p\u003e"
+          },
+          {
+            "lineNumber": 13,
+            "text": "            \u003c/div\u003e"
+          },
+          {
+            "lineNumber": 14
+          },
+          {
+            "lineNumber": 15,
+            "text": "            \u003cdiv className=\"bg-zinc-900 p-6 rounded\"\u003e"
+          },
+          {
+            "lineNumber": 16,
+            "text": "                \u003ch2 className=\"text-s1 font bold mb-4\"\u003eI Nostri Vaolori\u003c/h2\u003e"
+          },
+          {
+            "lineNumber": 17,
+            "text": "                \u003cul className=\"space-y-2\"\u003e"
+          },
+          {
+            "lineNumber": 18,
+            "text": "                    \u003cli\u003eQualità del codice\u003c/li\u003e"
+          },
+          {
+            "lineNumber": 19,
+            "text": "                    \u003cli\u003ePerformance first\u003c/li\u003e"
+          },
+          {
+            "lineNumber": 20,
+            "text": "                    \u003cli\u003eUser experience\u003c/li\u003e"
+          },
+          {
+            "lineNumber": 21,
+            "text": "                \u003c/ul\u003e"
+          },
+          {
+            "lineNumber": 22,
+            "text": "            \u003c/div\u003e"
+          },
+          {
+            "lineNumber": 23,
+            "text": "        \u003c/main\u003e"
+          },
+          {
+            "lineNumber": 24,
+            "text": "    );"
+          },
+          {
+            "isSignature": true,
+            "lineNumber": 25,
+            "text": "}"
+          }
+        ],
+        "range": {
+          "endPosition": {
+            "column": 1,
+            "line": 24
+          },
+          "startPosition": {}
+        },
+        "relativeWorkspacePath": ".\\app\\app\\about\\page.tsx",
+        "signatures": {}
+      },
+      "score": 0.08520275354385376
+    },
+    {
+      "codeBlock": {
+        "detailedLines": [
+          {
+            "lineNumber": 1,
+            "text": "import type { Metadata } from \"next\";"
+          },
+          {
+            "lineNumber": 2,
+            "text": "import { Geist, Geist_Mono } from \"next/font/google\";"
+          },
+          {
+            "lineNumber": 3,
+            "text": "import \"./globals.css\";"
+          },
+          {
+            "lineNumber": 4,
+            "text": "import Navbar from \"@/components/Navbar\";"
+          },
+          {
+            "lineNumber": 5
+          },
+          {
+            "lineNumber": 6,
+            "text": "const geistSans = Geist({"
+          },
+          {
+            "lineNumber": 7,
+            "text": "  variable: \"--font-geist-sans\","
+          },
+          {
+            "lineNumber": 8,
+            "text": "  subsets: [\"latin\"],"
+          },
+          {
+            "lineNumber": 9,
+            "text": "});"
+          },
+          {
+            "lineNumber": 10
+          },
+          {
+            "lineNumber": 11,
+            "text": "const geistMono = Geist_Mono({"
+          },
+          {
+            "lineNumber": 12,
+            "text": "  variable: \"--font-geist-mono\","
+          },
+          {
+            "lineNumber": 13,
+            "text": "  subsets: [\"latin\"],"
+          },
+          {
+            "lineNumber": 14,
+            "text": "});"
+          },
+          {
+            "lineNumber": 15
+          },
+          {
+            "lineNumber": 16,
+            "text": "export const metadata: Metadata = {"
+          },
+          {
+            "lineNumber": 17,
+            "text": "  title: \"Create Next App\","
+          },
+          {
+            "lineNumber": 18,
+            "text": "  description: \"Generated by create next app\","
+          },
+          {
+            "lineNumber": 19,
+            "text": "};"
+          },
+          {
+            "lineNumber": 20
+          },
+          {
+            "isSignature": true,
+            "lineNumber": 21,
+            "text": "export default function RootLayout({"
+          },
+          {
+            "isSignature": true,
+            "lineNumber": 22,
+            "text": "  children,"
+          },
+          {
+            "isSignature": true,
+            "lineNumber": 23,
+            "text": "}: Readonly\u003c{"
+          },
+          {
+            "isSignature": true,
+            "lineNumber": 24,
+            "text": "  children: React.ReactNode;"
+          },
+          {
+            "isSignature": true,
+            "lineNumber": 25,
+            "text": "}\u003e) {"
+          },
+          {
+            "lineNumber": 26,
+            "text": "  "
+          },
+          {
+            "isSignature": true,
+            "lineNumber": 37,
+            "text": "}"
+          }
+        ],
+        "range": {
+          "endPosition": {
+            "column": 1,
+            "line": 36
+          },
+          "startPosition": {}
+        },
+        "relativeWorkspacePath": ".\\app\\app\\layout.tsx",
+        "signatures": {}
+      },
+      "score": 0.07769899815320969
+    },
+    {
+      "codeBlock": {
+        "detailedLines": [
+          {
+            "isSignature": true,
+            "lineNumber": 3,
+            "text": "export default function Home() {"
+          },
+          {
+            "lineNumber": 36
+          },
+          {
+            "lineNumber": 37,
+            "text": "        \u003cdiv className=\"flex flex-col gap-4 text-base font-medium sm:flex-row\"\u003e"
+          },
+          {
+            "lineNumber": 38,
+            "text": "          \u003ca"
+          },
+          {
+            "lineNumber": 39,
+            "text": "            className=\"flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]\""
+          },
+          {
+            "lineNumber": 40,
+            "text": "            href=\"https://vercel.com/new?utm_source=create-next-app\u0026utm_medium=appdir-template-tw\u0026utm_campaign=create-next-app\""
+          },
+          {
+            "lineNumber": 41,
+            "text": "            target=\"_blank\""
+          },
+          {
+            "lineNumber": 42,
+            "text": "            rel=\"noopener noreferrer\""
+          },
+          {
+            "lineNumber": 43,
+            "text": "          \u003e"
+          },
+          {
+            "lineNumber": 44,
+            "text": "            \u003cImage"
+          },
+          {
+            "lineNumber": 45,
+            "text": "              className=\"dark:invert\""
+          },
+          {
+            "lineNumber": 46,
+            "text": "              src=\"/vercel.svg\""
+          },
+          {
+            "lineNumber": 47,
+            "text": "              alt=\"Vercel logomark\""
+          },
+          {
+            "lineNumber": 48,
+            "text": "              width={16}"
+          },
+          {
+            "lineNumber": 49,
+            "text": "              height={16}"
+          },
+          {
+            "lineNumber": 50,
+            "text": "            /\u003e"
+          },
+          {
+            "lineNumber": 51,
+            "text": "            Deploy Now"
+          },
+          {
+            "lineNumber": 52,
+            "text": "          \u003c/a\u003e"
+          },
+          {
+            "lineNumber": 53,
+            "text": "          \u003ca"
+          },
+          {
+            "lineNumber": 54,
+            "text": "            className=\"flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]\""
+          },
+          {
+            "lineNumber": 55,
+            "text": "            href=\"https://nextjs.org/docs?utm_source=create-next-app\u0026utm_medium=appdir-template-tw\u0026utm_campaign=create-next-app\""
+          },
+          {
+            "lineNumber": 56,
+            "text": "            target=\"_blank\""
+          },
+          {
+            "lineNumber": 57,
+            "text": "            rel=\"noopener noreferrer\""
+          },
+          {
+            "lineNumber": 58,
+            "text": "          \u003e"
+          },
+          {
+            "lineNumber": 59,
+            "text": "            Documentation"
+          },
+          {
+            "lineNumber": 60,
+            "text": "          \u003c/a\u003e"
+          },
+          {
+            "lineNumber": 61,
+            "text": "        \u003c/div\u003e"
+          },
+          {
+            "lineNumber": 62,
+            "text": "      \u003c/main\u003e"
+          },
+          {
+            "lineNumber": 63,
+            "text": "    \u003c/div\u003e"
+          },
+          {
+            "lineNumber": 64,
+            "text": "  );"
+          },
+          {
+            "isSignature": true,
+            "lineNumber": 65,
+            "text": "}"
+          }
+        ],
+        "range": {
+          "endPosition": {
+            "column": 1,
+            "line": 64
+          },
+          "startPosition": {
+            "line": 2
+          }
+        },
+        "relativeWorkspacePath": ".\\app\\app\\page.tsx",
+        "signatures": {
+          "ranges": [
+            {
+              "endPosition": {
+                "column": 16,
+                "line": 3
+              },
+              "startPosition": {
+                "column": 1,
+                "line": 3
+              }
+            },
+            {
+              "endPosition": {
+                "column": 3,
+                "line": 4
+              },
+              "startPosition": {
+                "column": 16,
+                "line": 3
+              }
+            }
+          ]
+        }
+      },
+      "score": 0.07475560158491135
+    },
+    {
+      "codeBlock": {
+        "detailedLines": [
+          {
+            "lineNumber": 1,
+            "text": "{"
+          },
+          {
+            "lineNumber": 2,
+            "text": "  \"name\": \"app\","
+          },
+          {
+            "lineNumber": 3,
+            "text": "  \"version\": \"0.1.0\","
+          },
+          {
+            "lineNumber": 4,
+            "text": "  \"private\": true,"
+          },
+          {
+            "lineNumber": 5,
+            "text": "  \"scripts\": {"
+          },
+          {
+            "lineNumber": 6,
+            "text": "    \"dev\": \"next dev\","
+          },
+          {
+            "lineNumber": 7,
+            "text": "    \"build\": \"next build\","
+          },
+          {
+            "lineNumber": 8,
+            "text": "    \"start\": \"next start\","
+          },
+          {
+            "lineNumber": 9,
+            "text": "    \"lint\": \"eslint\""
+          },
+          {
+            "lineNumber": 10,
+            "text": "  },"
+          },
+          {
+            "lineNumber": 11,
+            "text": "  \"dependencies\": {"
+          },
+          {
+            "lineNumber": 12,
+            "text": "    \"next\": \"16.2.6\","
+          },
+          {
+            "lineNumber": 13,
+            "text": "    \"react\": \"19.2.4\","
+          },
+          {
+            "lineNumber": 14,
+            "text": "    \"react-dom\": \"19.2.4\""
+          },
+          {
+            "lineNumber": 15,
+            "text": "  },"
+          },
+          {
+            "lineNumber": 16,
+            "text": "  \"devDependencies\": {"
+          },
+          {
+            "lineNumber": 17,
+            "text": "    \"@tailwindcss/postcss\": \"^4\","
+          },
+          {
+            "lineNumber": 18,
+            "text": "    \"@types/node\": \"^20\","
+          },
+          {
+            "lineNumber": 19,
+            "text": "    \"@types/react\": \"^19\","
+          },
+          {
+            "lineNumber": 20,
+            "text": "    \"@types/react-dom\": \"^19\","
+          },
+          {
+            "lineNumber": 21,
+            "text": "    \"eslint\": \"^9\","
+          },
+          {
+            "lineNumber": 22,
+            "text": "    \"eslint-config-next\": \"16.2.6\","
+          },
+          {
+            "lineNumber": 23,
+            "text": "    \"tailwindcss\": \"^4\","
+          },
+          {
+            "lineNumber": 24,
+            "text": "    \"typescript\": \"^5\""
+          },
+          {
+            "lineNumber": 25,
+            "text": "  }"
+          },
+          {
+            "lineNumber": 26,
+            "text": "}\r"
+          }
+        ],
+        "range": {
+          "endPosition": {
+            "line": 26
+          },
+          "startPosition": {}
+        },
+        "relativeWorkspacePath": ".\\app\\package.json",
+        "signatures": {}
+      },
+      "score": 0.07395020127296448
+    },
+    {
+      "codeBlock": {
+        "detailedLines": [
+          {
+            "lineNumber": 1,
+            "text": "{"
+          },
+          {
+            "lineNumber": 2,
+            "text": "  \"name\": \"app\","
+          },
+          {
+            "lineNumber": 3,
+            "text": "  \"version\": \"0.1.0\","
+          },
+          {
+            "lineNumber": 4,
+            "text": "  \"private\": true,"
+          },
+          {
+            "lineNumber": 5,
+            "text": "  \"scripts\": {"
+          },
+          {
+            "lineNumber": 6,
+            "text": "    \"dev\": \"next dev\","
+          },
+          {
+            "lineNumber": 7,
+            "text": "    \"build\": \"next build\","
+          },
+          {
+            "lineNumber": 8,
+            "text": "    \"start\": \"next start\","
+          },
+          {
+            "lineNumber": 9,
+            "text": "    \"lint\": \"eslint\""
+          },
+          {
+            "lineNumber": 10,
+            "text": "  },"
+          },
+          {
+            "lineNumber": 11,
+            "text": "  \"dependencies\": {"
+          },
+          {
+            "lineNumber": 12,
+            "text": "    \"next\": \"16.2.6\","
+          },
+          {
+            "lineNumber": 13,
+            "text": "    \"react\": \"19.2.4\","
+          },
+          {
+            "lineNumber": 14,
+            "text": "    \"react-dom\": \"19.2.4\""
+          },
+          {
+            "lineNumber": 15,
+            "text": "  },"
+          },
+          {
+            "lineNumber": 16,
+            "text": "  \"devDependencies\": {"
+          },
+          {
+            "lineNumber": 17,
+            "text": "    \"@tailwindcss/postcss\": \"^4\","
+          },
+          {
+            "lineNumber": 18,
+            "text": "    \"@types/node\": \"^20\","
+          },
+          {
+            "lineNumber": 19,
+            "text": "    \"@types/react\": \"^19\","
+          },
+          {
+            "lineNumber": 20,
+            "text": "    \"@types/react-dom\": \"^19\","
+          },
+          {
+            "lineNumber": 21,
+            "text": "    \"eslint\": \"^9\","
+          },
+          {
+            "lineNumber": 22,
+            "text": "    \"eslint-config-next\": \"16.2.6\","
+          },
+          {
+            "lineNumber": 23,
+            "text": "    \"tailwindcss\": \"^4\","
+          },
+          {
+            "lineNumber": 24,
+            "text": "    \"typescript\": \"^5\""
+          },
+          {
+            "lineNumber": 25,
+            "text": "  }"
+          },
+          {
+            "lineNumber": 26,
+            "text": "}\r"
+          }
+        ],
+        "range": {
+          "endPosition": {
+            "line": 26
+          },
+          "startPosition": {}
+        },
+        "relativeWorkspacePath": ".\\app\\package.json",
+        "signatures": {}
+      },
+      "score": 0.07323429733514786
+    },
+    {
+      "codeBlock": {
+        "detailedLines": [
+          {
+            "isSignature": true,
+            "lineNumber": 28,
+            "text": "export default function Navbar() {"
+          },
+          {
+            "lineNumber": 49
+          },
+          {
+            "lineNumber": 50,
+            "text": "                    \u003cdiv className=\"flex space-x-8\"\u003e"
+          },
+          {
+            "lineNumber": 51
+          },
+          {
+            "lineNumber": 52,
+            "text": "                        {/* Link normali */}"
+          },
+          {
+            "lineNumber": 53,
+            "text": "                        {navLinks.map((link) =\u003e ("
+          },
+          {
+            "lineNumber": 54,
+            "text": "                            \u003cLink"
+          },
+          {
+            "lineNumber": 55,
+            "text": "                                key={link.href}"
+          },
+          {
+            "lineNumber": 56,
+            "text": "                                href={link.href}"
+          },
+          {
+            "lineNumber": 57,
+            "text": "                                className=\"flex items-center text-zinc-300 hover:text-zinc-100 transition-colors\""
+          },
+          {
+            "lineNumber": 58,
+            "text": "                            \u003e"
+          },
+          {
+            "lineNumber": 59,
+            "text": "                                {link.label}"
+          },
+          {
+            "lineNumber": 60,
+            "text": "                            \u003c/Link\u003e"
+          },
+          {
+            "lineNumber": 61,
+            "text": "                        ))}"
+          },
+          {
+            "lineNumber": 62
+          },
+          {
+            "lineNumber": 63,
+            "text": "                        {/* Dropdown menu */}"
+          },
+          {
+            "lineNumber": 64,
+            "text": "                        \u003cdiv className=\"relative flex items-center\"\u003e"
+          },
+          {
+            "lineNumber": 65
+          },
+          {
+            "lineNumber": 66,
+            "text": "                            \u003cbutton"
+          },
+          {
+            "lineNumber": 67,
+            "text": "                                className=\"flex items-center text-zinc-300 hover:text-zinc-100 transition-colors\""
+          },
+          {
+            "lineNumber": 68,
+            "text": "                                onClick={toggleServices}"
+          },
+          {
+            "lineNumber": 69,
+            "text": "                                aria-expanded={isServicesOpen}"
+          },
+          {
+            "lineNumber": 70,
+            "text": "                                aria-label=\"Toggle services menu\""
+          },
+          {
+            "lineNumber": 71,
+            "text": "                            \u003e"
+          },
+          {
+            "lineNumber": 72,
+            "text": "                                Services"
+          },
+          {
+            "lineNumber": 73
+          },
+          {
+            "lineNumber": 74,
+            "text": "                                \u003csvg"
+          },
+          {
+            "lineNumber": 75,
+            "text": "                                    className={&#96;ml-1 h-4 w-4 transition-transform duration-300 ${isServicesOpen ? \"rotate-180\" : \"\""
+          },
+          {
+            "lineNumber": 76,
+            "text": "                                        }&#96;}"
+          },
+          {
+            "lineNumber": 77,
+            "text": "                                    fill=\"none\""
+          },
+          {
+            "lineNumber": 78,
+            "text": "                                    stroke=\"currentColor\""
+          },
+          {
+            "lineNumber": 79,
+            "text": "                                    viewBox=\"0 0 24 24\""
+          },
+          {
+            "lineNumber": 80,
+            "text": "                                \u003e"
+          },
+          {
+            "lineNumber": 81,
+            "text": "                                    \u003cpath"
+          },
+          {
+            "lineNumber": 82,
+            "text": "                                        strokeLinecap=\"round\""
+          },
+          {
+            "lineNumber": 83,
+            "text": "                                        strokeLinejoin=\"round\""
+          },
+          {
+            "lineNumber": 84,
+            "text": "                                        strokeWidth={2}"
+          },
+          {
+            "lineNumber": 85,
+            "text": "                                        d=\"M19 9l-7 7-7-7\""
+          },
+          {
+            "lineNumber": 86,
+            "text": "                                    /\u003e"
+          },
+          {
+            "lineNumber": 87,
+            "text": "                                \u003c/svg\u003e"
+          },
+          {
+            "lineNumber": 88,
+            "text": "                            \u003c/button\u003e"
+          },
+          {
+            "lineNumber": 89
+          },
+          {
+            "lineNumber": 90,
+            "text": "                            {/* Menu dropdown */}"
+          },
+          {
+            "lineNumber": 91,
+            "text": "                            {isServicesOpen \u0026\u0026 ("
+          },
+          {
+            "lineNumber": 92,
+            "text": "                                \u003cdiv"
+          },
+          {
+            "lineNumber": 93,
+            "text": "                                    className"
+          },
+          {
+            "isSignature": true,
+            "lineNumber": 115,
+            "text": "}"
+          }
+        ],
+        "range": {
+          "endPosition": {
+            "column": 1,
+            "line": 114
+          },
+          "startPosition": {
+            "line": 27
+          }
+        },
+        "relativeWorkspacePath": ".\\app\\components\\Navbar.tsx",
+        "signatures": {
+          "ranges": [
+            {
+              "endPosition": {
+                "column": 16,
+                "line": 28
+              },
+              "startPosition": {
+                "column": 1,
+                "line": 28
+              }
+            },
+            {
+              "endPosition": {
+                "column": 5,
+                "line": 29
+              },
+              "startPosition": {
+                "column": 16,
+                "line": 28
+              }
+            }
+          ]
+        }
+      },
+      "score": 0.07212410122156143
+    },
+    {
+      "codeBlock": {
+        "detailedLines": [
+          {
+            "lineNumber": 1,
+            "text": "{"
+          },
+          {
+            "lineNumber": 2,
+            "text": "  \"compilerOptions\": {"
+          },
+          {
+            "lineNumber": 3,
+            "text": "    \"target\": \"ES2017\","
+          },
+          {
+            "lineNumber": 4,
+            "text": "    \"lib\": [\"dom\", \"dom.iterable\", \"esnext\"],"
+          },
+          {
+            "lineNumber": 5,
+            "text": "    \"allowJs\": true,"
+          },
+          {
+            "lineNumber": 6,
+            "text": "    \"skipLibCheck\": true,"
+          },
+          {
+            "lineNumber": 7,
+            "text": "    \"strict\": true,"
+          },
+          {
+            "lineNumber": 8,
+            "text": "    \"noEmit\": true,"
+          },
+          {
+            "lineNumber": 9,
+            "text": "    \"esModuleInterop\": true,"
+          },
+          {
+            "lineNumber": 10,
+            "text": "    \"module\": \"esnext\","
+          },
+          {
+            "lineNumber": 11,
+            "text": "    \"moduleResolution\": \"bundler\","
+          },
+          {
+            "lineNumber": 12,
+            "text": "    \"resolveJsonModule\": true,"
+          },
+          {
+            "lineNumber": 13,
+            "text": "    \"isolatedModules\": true,"
+          },
+          {
+            "lineNumber": 14,
+            "text": "    \"jsx\": \"react-jsx\","
+          },
+          {
+            "lineNumber": 15,
+            "text": "    \"incremental\": true,"
+          },
+          {
+            "lineNumber": 16,
+            "text": "    \"plugins\": ["
+          },
+          {
+            "lineNumber": 17,
+            "text": "      {"
+          },
+          {
+            "lineNumber": 18,
+            "text": "        \"name\": \"next\""
+          },
+          {
+            "lineNumber": 19,
+            "text": "      }"
+          },
+          {
+            "lineNumber": 20,
+            "text": "    ],"
+          },
+          {
+            "lineNumber": 21,
+            "text": "    \"paths\": {"
+          },
+          {
+            "lineNumber": 22,
+            "text": "      \"@/*\": [\"./*\"]"
+          },
+          {
+            "lineNumber": 23,
+            "text": "    }"
+          },
+          {
+            "lineNumber": 24,
+            "text": "  },"
+          },
+          {
+            "lineNumber": 25,
+            "text": "  \"include\": ["
+          },
+          {
+            "lineNumber": 26,
+            "text": "    \"next-env.d.ts\","
+          },
+          {
+            "lineNumber": 27,
+            "text": "    \"**/*.ts\","
+          },
+          {
+            "lineNumber": 28,
+            "text": "    \"**/*.tsx\","
+          },
+          {
+            "lineNumber": 29,
+            "text": "    \".next/types/**/*.ts\","
+          },
+          {
+            "lineNumber": 30,
+            "text": "    \".next/dev/types/**/*.ts\","
+          },
+          {
+            "lineNumber": 31,
+            "text": "    \"**/*.mts\""
+          },
+          {
+            "lineNumber": 32,
+            "text": "  ],"
+          },
+          {
+            "lineNumber": 33,
+            "text": "  \"exclude\": [\"node_modules\"]"
+          },
+          {
+            "lineNumber": 34,
+            "text": "}"
+          }
+        ],
+        "range": {
+          "endPosition": {
+            "line": 34
+          },
+          "startPosition": {}
+        },
+        "relativeWorkspacePath": ".\\app\\tsconfig.json",
+        "signatures": {}
+      },
+      "score": 0.06570439785718918
+    },
+    {
+      "codeBlock": {
+        "detailedLines": [
+          {
+            "lineNumber": 1,
+            "text": "{"
+          },
+          {
+            "lineNumber": 2,
+            "text": "  \"compilerOptions\": {"
+          },
+          {
+            "lineNumber": 3,
+            "text": "    \"target\": \"ES2017\","
+          },
+          {
+            "lineNumber": 4,
+            "text": "    \"lib\": [\"dom\", \"dom.iterable\", \"esnext\"],"
+          },
+          {
+            "lineNumber": 5,
+            "text": "    \"allowJs\": true,"
+          },
+          {
+            "lineNumber": 6,
+            "text": "    \"skipLibCheck\": true,"
+          },
+          {
+            "lineNumber": 7,
+            "text": "    \"strict\": true,"
+          },
+          {
+            "lineNumber": 8,
+            "text": "    \"noEmit\": true,"
+          },
+          {
+            "lineNumber": 9,
+            "text": "    \"esModuleInterop\": true,"
+          },
+          {
+            "lineNumber": 10,
+            "text": "    \"module\": \"esnext\","
+          },
+          {
+            "lineNumber": 11,
+            "text": "    \"moduleResolution\": \"bundler\","
+          },
+          {
+            "lineNumber": 12,
+            "text": "    \"resolveJsonModule\": true,"
+          },
+          {
+            "lineNumber": 13,
+            "text": "    \"isolatedModules\": true,"
+          },
+          {
+            "lineNumber": 14,
+            "text": "    \"jsx\": \"react-jsx\","
+          },
+          {
+            "lineNumber": 15,
+            "text": "    \"incremental\": true,"
+          },
+          {
+            "lineNumber": 16,
+            "text": "    \"plugins\": ["
+          },
+          {
+            "lineNumber": 17,
+            "text": "      {"
+          },
+          {
+            "lineNumber": 18,
+            "text": "        \"name\": \"next\""
+          },
+          {
+            "lineNumber": 19,
+            "text": "      }"
+          },
+          {
+            "lineNumber": 20,
+            "text": "    ],"
+          },
+          {
+            "lineNumber": 21,
+            "text": "    \"paths\": {"
+          },
+          {
+            "lineNumber": 22,
+            "text": "      \"@/*\": [\"./*\"]"
+          },
+          {
+            "lineNumber": 23,
+            "text": "    }"
+          },
+          {
+            "lineNumber": 24,
+            "text": "  },"
+          },
+          {
+            "lineNumber": 25,
+            "text": "  \"include\": ["
+          },
+          {
+            "lineNumber": 26,
+            "text": "    \"next-env.d.ts\","
+          },
+          {
+            "lineNumber": 27,
+            "text": "    \"**/*.ts\","
+          },
+          {
+            "lineNumber": 28,
+            "text": "    \"**/*.tsx\","
+          },
+          {
+            "lineNumber": 29,
+            "text": "    \".next/types/**/*.ts\","
+          },
+          {
+            "lineNumber": 30,
+            "text": "    \".next/dev/types/**/*.ts\","
+          },
+          {
+            "lineNumber": 31,
+            "text": "    \"**/*.mts\""
+          },
+          {
+            "lineNumber": 32,
+            "text": "  ],"
+          },
+          {
+            "lineNumber": 33,
+            "text": "  \"exclude\": [\"node_modules\"]"
+          },
+          {
+            "lineNumber": 34,
+            "text": "}"
+          }
+        ],
+        "range": {
+          "endPosition": {
+            "line": 34
+          },
+          "startPosition": {}
+        },
+        "relativeWorkspacePath": ".\\app\\tsconfig.json",
+        "signatures": {}
+      },
+      "score": 0.0642537996172905
+    },
+    {
+      "codeBlock": {
+        "detailedLines": [
+          {
+            "lineNumber": 1,
+            "text": "// app/blog/page.js"
+          },
+          {
+            "isSignature": true,
+            "lineNumber": 2,
+            "text": "export default function Blog(){"
+          },
+          {
+            "lineNumber": 3,
+            "text": "    return \u003ch1\u003eBlog Main Page\u003c/h1\u003e;"
+          },
+          {
+            "lineNumber": 4,
+            "text": "    "
+          },
+          {
+            "isSignature": true,
+            "lineNumber": 5,
+            "text": "}"
+          }
+        ],
+        "range": {
+          "endPosition": {
+            "column": 1,
+            "line": 4
+          },
+          "startPosition": {}
+        },
+        "relativeWorkspacePath": ".\\app\\app\\blog\\page.tsx",
+        "signatures": {}
+      },
+      "score": 0.06311289966106415
+    },
+    {
+      "codeBlock": {
+        "detailedLines": [
+          {
+            "lineNumber": 1,
+            "text": "@import \"tailwindcss\";"
+          },
+          {
+            "lineNumber": 2
+          },
+          {
+            "lineNumber": 3,
+            "text": ":root {"
+          },
+          {
+            "lineNumber": 4,
+            "text": "  --background: #ffffff;"
+          },
+          {
+            "lineNumber": 5,
+            "text": "  --foreground: #171717;"
+          },
+          {
+            "lineNumber": 6,
+            "text": "}"
+          },
+          {
+            "lineNumber": 7
+          },
+          {
+            "lineNumber": 8,
+            "text": "@theme inline {"
+          },
+          {
+            "lineNumber": 9,
+            "text": "  --color-background: var(--background);"
+          },
+          {
+            "lineNumber": 10,
+            "text": "  --color-foreground: var(--foreground);"
+          },
+          {
+            "lineNumber": 11,
+            "text": "  --font-sans: var(--font-geist-sans);"
+          },
+          {
+            "lineNumber": 12,
+            "text": "  --font-mono: var(--font-geist-mono);"
+          },
+          {
+            "lineNumber": 13,
+            "text": "}"
+          },
+          {
+            "lineNumber": 14
+          },
+          {
+            "lineNumber": 15,
+            "text": "@media (prefers-color-scheme: dark) {"
+          },
+          {
+            "lineNumber": 16,
+            "text": "  :root {"
+          },
+          {
+            "lineNumber": 17,
+            "text": "    --background: #0a0a0a;"
+          },
+          {
+            "lineNumber": 18,
+            "text": "    --foreground: #ededed;"
+          },
+          {
+            "lineNumber": 19,
+            "text": "  }"
+          },
+          {
+            "lineNumber": 20,
+            "text": "}"
+          },
+          {
+            "lineNumber": 21
+          },
+          {
+            "lineNumber": 22,
+            "text": "body {"
+          },
+          {
+            "lineNumber": 23,
+            "text": "  background: var(--background);"
+          },
+          {
+            "lineNumber": 24,
+            "text": "  color: var(--foreground);"
+          },
+          {
+            "lineNumber": 25,
+            "text": "  font-family: Arial, Helvetica, sans-serif;"
+          },
+          {
+            "lineNumber": 26,
+            "text": "}"
+          }
+        ],
+        "range": {
+          "endPosition": {
+            "line": 26
+          },
+          "startPosition": {}
+        },
+        "relativeWorkspacePath": ".\\app\\app\\globals.css",
+        "signatures": {}
+      },
+      "score": 0.06259570270776749
+    },
+    {
+      "codeBlock": {
+        "detailedLines": [
+          {
+            "lineNumber": 1,
+            "text": "@import \"tailwindcss\";"
+          },
+          {
+            "lineNumber": 2
+          },
+          {
+            "lineNumber": 3,
+            "text": ":root {"
+          },
+          {
+            "lineNumber": 4,
+            "text": "  --background: #ffffff;"
+          },
+          {
+            "lineNumber": 5,
+            "text": "  --foreground: #171717;"
+          },
+          {
+            "lineNumber": 6,
+            "text": "}"
+          },
+          {
+            "lineNumber": 7
+          },
+          {
+            "lineNumber": 8,
+            "text": "@theme inline {"
+          },
+          {
+            "lineNumber": 9,
+            "text": "  --color-background: var(--background);"
+          },
+          {
+            "lineNumber": 10,
+            "text": "  --color-foreground: var(--foreground);"
+          },
+          {
+            "lineNumber": 11,
+            "text": "  --font-sans: var(--font-geist-sans);"
+          },
+          {
+            "lineNumber": 12,
+            "text": "  --font-mono: var(--font-geist-mono);"
+          },
+          {
+            "lineNumber": 13,
+            "text": "}"
+          },
+          {
+            "lineNumber": 14
+          },
+          {
+            "lineNumber": 15,
+            "text": "@media (prefers-color-scheme: dark) {"
+          },
+          {
+            "lineNumber": 16,
+            "text": "  :root {"
+          },
+          {
+            "lineNumber": 17,
+            "text": "    --background: #0a0a0a;"
+          },
+          {
+            "lineNumber": 18,
+            "text": "    --foreground: #ededed;"
+          },
+          {
+            "lineNumber": 19,
+            "text": "  }"
+          },
+          {
+            "lineNumber": 20,
+            "text": "}"
+          },
+          {
+            "lineNumber": 21
+          },
+          {
+            "lineNumber": 22,
+            "text": "body {"
+          },
+          {
+            "lineNumber": 23,
+            "text": "  background: var(--background);"
+          },
+          {
+            "lineNumber": 24,
+            "text": "  color: var(--foreground);"
+          },
+          {
+            "lineNumber": 25,
+            "text": "  font-family: Arial, Helvetica, sans-serif;"
+          },
+          {
+            "lineNumber": 26,
+            "text": "}"
+          }
+        ],
+        "range": {
+          "endPosition": {
+            "line": 26
+          },
+          "startPosition": {}
+        },
+        "relativeWorkspacePath": ".\\app\\app\\globals.css",
+        "signatures": {}
+      },
+      "score": 0.06219596043229103
+    }
+  ]
+}
+```
+Status: **completed**
+
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="unknown" data-tool-name="semantic_search_full"><details>
+<summary>Tool use: **semantic_search_full**</summary>
+
+</details></tool-use>
+
+_**Agent (default)**_
+
+<tool-use data-tool-type="unknown" data-tool-name="web_search">
+<details>
+<summary>Tool use: **web_search**</summary>
+
+
+Parameters:
+
+```json
+{
+  "searchTerm": "corso-nextjs-youtube ContactForm.tsx github"
+}
+```
+Result:
+
+```json
+{
+  "isFinal": true,
+  "references": [
+    {
+      "chunk": "Links:\n1. [Jerga99/next-youtube-course](https://github.com/Jerga99/next-youtube-course)\n2. [bwestwood11/react-hook-form-youtube-tutorial](https://github.com/bwestwood11/react-hook-form-youtube-tutorial)\n3. [DharshanSR/contact-form-nextjs-ts](https://github.com/DharshanSR/contact-form-nextjs-ts)\n4. [Form Validation part 1 · e31b923 · Jerga99/next-youtube-course](https://github.com/Jerga99/next-youtube-course/commit/e31b92302b2878124dee09db32ec26d7535e611a)\n5. [ProNextJS/forms-management-yt](https://github.com/ProNextJS/forms-management-yt)\n\n# Search Results Summary\n\nThe search results don't contain a specific &#96;ContactForm.tsx&#96; file from a \"corso-nextjs\" course on GitHub. However, the results show several Next.js form-related projects:\n\n**Most Relevant:**\n- **Jerga99/next-youtube-course** [1] - A Next.js YouTube course repository with form validation examples. It includes a &#96;PortfolioForm.js&#96; component [4] that demonstrates form validation using React Hook Form, though it's in JavaScript rather than TypeScript.\n\n- **DharshanSR/contact-form-nextjs-ts** [3] - A TypeScript contact form built with Next.js, React Hook Form, and Yup validation. This is the closest match to what you're looking for, featuring a complete contact form implementation.\n\n- **bwestwood11/react-hook-form-youtube-tutorial** [2] - A YouTube tutorial repository for building advanced forms with TypeScript, React Hook Form, and Next.js.\n\n- **ProNextJS/forms-management-yt** [5] - A forms management video code repository in TypeScript.\n\nThe specific &#96;ContactForm.tsx&#96; file you're searching for isn't directly available in these results. You may need to search more specifically for the \"corso\" course repository or check the individual repositories listed above for their components folders.",
+      "title": "Web search results"
+    }
+  ],
+  "rejected": false
+}
+```
+User decision: **accepted**
+
+Status: **completed**
+
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="unknown" data-tool-name="web_search"><details>
+<summary>Tool use: **web_search**</summary>
+
+</details></tool-use>
+
+_**Agent (default)**_
+
+<think><details><summary>Thought Process</summary>
+The user seeks to understand the structural differences between the original tutorial code and their current implementation.
+
+The tutorial uses a client component with typed state and controlled inputs, while the user's current implementation differs in directory structure and potentially in component organization.
+
+The tutorial likely places the title either inside the ContactForm component or on the page itself, with the ContactForm containing the form fields. In contrast, the user's implementation includes a FormField helper component, whereas the tutorial typically inlines each field. Additionally, the tutorial's Page.tsx likely only imports the ContactForm without duplicating the title. The screenshot does not display the return JSX, which contains the layout and styling information.
+
+The user wants to align their implementation with the tutorial's structure, potentially requiring inline JSX, removal of the FormField component, and consistent commenting style. The goal is to match the tutorial's organization while preserving their dark theme preference.
+
+The user plans to refactor the ContactForm component to align with the tutorial's structure by removing the FormField helper, inlining the form fields, keeping the dark theme styling, and using consistent commenting styles. The page component will be simplified to just import and render the ContactForm.</details></think>
+
+_**Agent (default)**_
+
+Allineando il file alla struttura del corso: stessa organizzazione del tutorial (senza helper `FormField`), mantenendo lo stile scuro del layout.
+
+
+
+_**Agent (default)**_
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2">
+
+<details><summary>Tool use: **edit_file_v2** • Edit file: d:\PROVE\richieste_assistenza\app\components\ContactForm.tsx</summary>
+
+</details>
+
+</tool-use>
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (default)**_
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2">
+
+<details><summary>Tool use: **edit_file_v2** • Edit file: d:\PROVE\richieste_assistenza\app\components\ContactForm.tsx</summary>
+
+</details>
+
+</tool-use>
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (default)**_
+
+Incorrect tool arguments
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (default)**_
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2">
+
+<details><summary>Tool use: **edit_file_v2** • Edit file: d:\PROVE\richieste_assistenza\app\components\ContactForm.tsx</summary>
+
+</details>
+
+</tool-use>
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (default)**_
+
+<tool-use data-tool-type="unknown" data-tool-name="read_lints">
+<details>
+<summary>Tool use: **read_lints**</summary>
+
+
+Parameters:
+
+```json
+{
+  "paths": [
+    "d:\\PROVE\\richieste_assistenza\\app\\components\\ContactForm.tsx"
+  ]
+}
+```
+Result:
+
+```json
+{
+  "linterErrorsByFile": [
+    {
+      "relativeWorkspacePath": "d:\\PROVE\\richieste_assistenza\\app\\components\\ContactForm.tsx"
+    }
+  ]
+}
+```
+Status: **completed**
+
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="unknown" data-tool-name="read_lints"><details>
+<summary>Tool use: **read_lints**</summary>
+
+</details></tool-use>
+
+_**Agent (default)**_
+
+Ecco come è impostato il **codice originale del corso** (quello nello screenshot) e come si collega al tuo progetto.
+
+## Struttura del tutorial (parte visibile nello screenshot)
+
+Il file è un **Client Component** Next.js:
+
+1. **`"use client"`** — serve perché usi `useState` e gestisci eventi nel browser.
+2. **Tipi TypeScript**
+   - `FormData`: forma dei dati (`name`, `email`, `message`)
+   - `FormStatus`: stati del form (`idle` → `sending` → `success` / `error`)
+3. **Due stati React**
+   - `formData`: valori dei campi (form **controllato**)
+   - `status`: fase dell’invio
+4. **`handleSubmit`**
+   - `e.preventDefault()`
+   - `setStatus("sending")`
+   - `try` con simulazione API (`setTimeout` 1 secondo)
+   - in caso di successo: `console.log`, `setStatus("success")`, reset campi, dopo 3 s torna a `"idle"`
+   - `catch`: `setStatus("error")`
+5. **`handleChange`** — aggiorna un solo campo con spread:
+   ```ts
+   setFormData((prev) => ({ ...prev, [name]: value }));
+   ```
+
+Lo screenshot si ferma **prima del `return`**: il layout (JSX, classi Tailwind) viene dopo, nel video.
+
+## Differenze col tuo progetto (non errori)
+
+| Corso (video) | Il tuo repo |
+|---------------|-------------|
+| `src/components/ContactForm.tsx` | `app/components/ContactForm.tsx` |
+| `src/app/contact/page.tsx` | `app/app/contact/page.tsx` |
+| Import spesso `../../components/...` | Import `@/components/ContactForm` (alias in `tsconfig`) |
+
+La **logica** è la stessa del corso; cambia solo il percorso delle cartelle (App Router in `app/`).
+
+## Cosa avevamo aggiunto noi (e ora è riallineato)
+
+- Componente helper `FormField` → rimosso, campi **inline** come nel corso (`{/* Nome */}`, `{/* Email */}`, ecc.)
+- Commenti `// Simulazione API`, `// Reset form`, `// Reset stato` ripristinati
+- Titolo/descrizione sulla **pagina** `contact/page.tsx`, il form solo campi + pulsante (coerente con il layout scuro dell’immagine precedente)
+
+## Ruolo dei file
+
+```
+layout.tsx     → Navbar su tutte le pagine
+contact/page.tsx → titolo + testo + <ContactForm />
+ContactForm.tsx  → stato, submit, JSX del form
+```
+
+In sintesi: il corso separa **logica React** (stati, handler) dal **markup** (nel `return`); tu hai la stessa logica, con stile scuro sul JSX e titolo sulla pagina contatti.
+
+Se nel video il titolo “Contattaci” è **dentro** `ContactForm` e vuoi copiarlo identico, si può spostare da `page.tsx` al componente senza cambiare la logica.
